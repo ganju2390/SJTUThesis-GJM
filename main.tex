@@ -3,7 +3,7 @@
 % !TeX TXS-program:recompile-bibliography = txs:///latexmk/{} -v
 
 % 载入 SJTUThesis 模版
-\documentclass[type=master]{sjtuthesis}
+\documentclass[type=bachelor]{sjtuthesis}
 % 选项
 %   type=[doctor|master|bachelor],     % 可选（默认：master），论文类型
 %   zihao=[-4|5],                      % 可选（默认：-4），正文字号大小
@@ -39,14 +39,14 @@
 % 目录
 \tableofcontents
 % 插图索引
-\listoffigures
+% \listoffigures
 % 表格索引
-\listoftables
+% \listoftables
 % 算法索引
-\listofalgorithms
+% \listofalgorithms
 
 % 符号对照表
-\input{contents/nomenclature}
+% \input{contents/nomenclature}
 
 %TC:endignore
 
@@ -55,9 +55,13 @@
 
 % 正文内容
 \input{contents/intro}
-\input{contents/math_and_citations}
-\input{contents/floats}
+\input{contents/chap02}
+\input{contents/chap03}
+\input{contents/chap04}
+\input{contents/chap05}
 \input{contents/summary}
+% \input{contents/math_and_citations}
+% \input{contents/floats}
 
 %TC:ignore
 
@@ -71,8 +75,8 @@
 \captionsetup{list=no}
 
 % 附录内容
-\input{contents/app_maxwell_equations}
-\input{contents/app_flow_chart}
+% \input{contents/app_maxwell_equations}
+% \input{contents/app_flow_chart}
 
 % 结尾部分
 \backmatter
@@ -87,11 +91,10 @@
 \input{contents/achievements}
 
 % 简历
-\input{contents/resume}
+% \input{contents/resume}
 
 % 学士学位论文要求在最后有一个大摘要，单独编页码
-% 如果撰写学士学位论文，请取消下一行的注释
-% \input{contents/digest}
+\input{contents/digest}
 
 %TC:endignore
 
