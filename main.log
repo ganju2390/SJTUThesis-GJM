@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.11)  21 APR 2026 14:43
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.11)  21 APR 2026 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1700,7 +1700,7 @@ LaTeX Info: Command `\ddddot' is already robust on input line 20.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 14.22636pt
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(71.13188pt, 441.01775pt, 71.13188pt)
 * v-part:(T,H,B)=(99.58464pt, 631.65118pt, 113.81102pt)
 * \paperwidth=597.50787pt
@@ -1714,7 +1714,7 @@ LaTeX Info: Command `\ddddot' is already robust on input line 20.
 * \headsep=14.22636pt
 * \topskip=12.0pt
 * \footskip=28.45274pt
-* \marginparwidth=98.0pt
+* \marginparwidth=47.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1722,8 +1722,8 @@ LaTeX Info: Command `\ddddot' is already robust on input line 20.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1751,15 +1751,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Kang2023
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 20.
 Package biblatex Info: Reference segment=0 on input line 20.
 \c@lstlisting=\count580
@@ -1881,10 +1873,6 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
  [1
 
 
-] [2
-
-
-
 ]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
 (Font)              scaled to size 16.06pt on input line 26.
@@ -1906,7 +1894,7 @@ LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
 (Font)              scaled to size 16.06pt on input line 26.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 16.06pt on input line 26.
- [3] [4
+ [2
 
 
 
@@ -1917,7 +1905,7 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 14.22636pt
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(85.35826pt, 412.56499pt, 85.35826pt)
 * v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
@@ -1931,7 +1919,7 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 * \headsep=14.22636pt
 * \topskip=12.0pt
 * \footskip=28.45274pt
-* \marginparwidth=98.0pt
+* \marginparwidth=47.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1939,8 +1927,8 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -2004,32 +1992,29 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 8.0pt on input line 32.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 6.0pt on input line 32.
- [5
+ [3
 
-] [6
 
 
 
 ] (./contents/abstract.tex [1
 
 
-] [2
 
-]) [3
 
-] [4
 
-] (./main.toc [5
+]) [2
+
+
+] (./main.toc [3
+
 
 ])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [6] (./contents/intro.tex
+ [4] (./contents/intro.tex
 第 1 章
-
-LaTeX Warning: Citation 'Kang2023' on page 1 undefined on input line 15.
-
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
 (Font)              scaled to size 7.0pt on input line 22.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
@@ -2070,42 +2055,40 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 7.0pt on input line 22.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 5.0pt on input line 22.
-) (./contents/chap02.tex [1
+[1
 
 
-] [2]
+] [2]) (./contents/chap02.tex [3]
 第 2 章
-) (./contents/chap03.tex [3
-
-] [4
+) (./contents/chap03.tex [4
 
 ]
 第 3 章
-) (./contents/chap04.tex [5] [6
+) (./contents/chap04.tex [5
 
 ]
 第 4 章
-) (./contents/chap05.tex [7] [8
+) (./contents/chap05.tex [6
 
 ]
 第 5 章
-) (./contents/summary.tex [9] [10
+) (./contents/summary.tex [7
 
 ]
 第 6 章
-) [11] [12
+) [8
 
-] [13] [14] (./contents/acknowledgements.tex) (./contents/achievements.tex [15
+] [9
+
+] (./contents/acknowledgements.tex) (./contents/achievements.tex [10
 
 
 
-] [16
+]) (./contents/digest.tex) [11
 
-]) (./contents/digest.tex) [17
-
-] [18
 
 ] [1
+
 
 
 ] [2] (./main.aux)
@@ -2113,28 +2096,19 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3AA8749E710D9CF71C732A3974A7A007;9324.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60158 strings out of 470139
- 1405593 string characters out of 5477717
- 2414521 words of memory out of 5000000
- 87843 multiletter control sequences out of 15000+600000
- 700358 words of font info for 239 fonts, out of 8000000 for 9000
+ 60114 strings out of 470139
+ 1405651 string characters out of 5477717
+ 2403238 words of memory out of 5000000
+ 87800 multiletter control sequences out of 15000+600000
+ 700350 words of font info for 238 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 107i,13n,124p,1208b,7447s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,13n,124p,1208b,5055s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (20 pages).
