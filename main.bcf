@@ -2960,6 +2960,13 @@
     <bcf:citekey order="3" intorder="1">singh2022review</bcf:citekey>
     <bcf:citekey order="4" intorder="1">Zhao2024</bcf:citekey>
     <bcf:citekey order="5" intorder="1">wu2024review</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">dong2023robust</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">kong2020dynamics</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">fossen1995nonlinear</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">heshmati2019robust</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">heshmati2020robust</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">hu2024disturbance</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Hong2025Review</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
