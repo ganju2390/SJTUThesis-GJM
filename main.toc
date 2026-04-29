@@ -11,48 +11,66 @@
 \contentsline {subsection}{\numberline {1.2.4}小结}{5}{subsection.1.2.4}%
 \contentsline {section}{\numberline {1.3}本文主要研究内容与目标}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}论文结构安排}{6}{section.1.4}%
-\contentsline {section}{\numberline {1.5}本章小结}{7}{section.1.5}%
-\contentsline {chapter}{\numberline {第 2 章}ROV系统总体设计与建模理论}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}ROV总体系统架构}{8}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}模块化系统组成}{8}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}推进器矢量布局分析}{8}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}六自由度动力学建模理论}{8}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}坐标系建立与运动状态描述}{8}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}完整动力学方程（Fossen模型）}{8}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}实际工况下的简化动力学模型}{8}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}惯性矩阵、阻尼矩阵的化简与对角化处理}{8}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}恢复力向量的物理约束化简}{8}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}本章小结}{8}{section.2.4}%
-\contentsline {chapter}{\numberline {第 3 章}高精度运动控制算法设计}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}控制架构设计原则}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}姿态控制：SQRT-PID双环结构设计}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}平方根位置环与抗饱和策略}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}角速度PID反馈环}{9}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}平移运动速度控制策略}{9}{section.3.3}%
-\contentsline {section}{\numberline {3.4}基于物理特性的动力学前馈补偿}{9}{section.3.4}%
-\contentsline {section}{\numberline {3.5}过驱动系统的推力分配逻辑}{9}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}推力分配矩阵的推导}{9}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}基于伪逆的最小能耗解算}{9}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}本章小结}{9}{section.3.6}%
-\contentsline {chapter}{\numberline {第 4 章}控制系统仿真验证与分析}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}基于MATLAB/Simulink的仿真环境搭建}{10}{section.4.1}%
-\contentsline {section}{\numberline {4.2}推进器模型与传感器噪声模拟}{10}{section.4.2}%
-\contentsline {section}{\numberline {4.3}复杂工况下的算法鲁棒性分析}{10}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}恒定流扰动下的定位精度测试}{10}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}脐带缆张力干扰下的稳定性评估}{10}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}本章小结}{10}{section.4.4}%
-\contentsline {chapter}{\numberline {第 5 章}核心硬件平台研发与嵌入式软件开发}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}嵌入式控制核心与系统集成}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}智能电源监控与保护系统设计}{11}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}基于LM5069的过压/欠压保护机制}{11}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}涓流缓启动与浪涌电流抑制实现}{11}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}推进器驱动与底层通信协议}{11}{section.5.3}%
-\contentsline {section}{\numberline {5.4}本章小结}{11}{section.5.4}%
-\contentsline {chapter}{\numberline {第 6 章}总结与展望}{12}{chapter.6}%
-\contentsline {section}{\numberline {6.1}全文总结}{12}{section.6.1}%
-\contentsline {section}{\numberline {6.2}研究工作展望}{12}{section.6.2}%
-\contentsline {chapter}{参考文献}{13}{chapter*.11}%
-\contentsline {chapter}{致\quad 谢}{14}{section*.12}%
-\contentsline {chapter}{学术论文和科研成果目录}{15}{section*.14}%
+\contentsline {chapter}{\numberline {第 2 章}ROV系统建模}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}六自由度动力学建模理论}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}坐标系建立与运动状态描述}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}完整动力学方程}{8}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}惯性矩阵}{8}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}科里奥利与向心力矩阵}{9}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}水动力阻尼矩阵}{10}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}恢复力向量}{10}{subsubsection.2.1.2.4}%
+\contentsline {section}{\numberline {2.2}实际工况下的简化动力学模型}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}惯性矩阵的化简与对角化处理}{11}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}刚体惯性矩阵的化简}{11}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}附加质量矩阵的化简}{11}{subsubsection.2.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.2.1.3}总惯性矩阵的最终形式}{12}{subsubsection.2.2.1.3}%
+\contentsline {subsection}{\numberline {2.2.2}科里奥利与向心力矩阵的简化处理}{12}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}阻尼矩阵的线性化与对角化处理}{13}{subsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}线性化处理}{13}{subsubsection.2.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.2.3.2}对角化处理}{13}{subsubsection.2.2.3.2}%
+\contentsline {subsection}{\numberline {2.2.4}恢复力向量的物理约束化简}{13}{subsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4.1}中性浮力设计}{13}{subsubsection.2.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.2.4.2}重心浮心共线设计}{14}{subsubsection.2.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.2.4.3}深重心布局}{14}{subsubsection.2.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.2.4.4}简化后的恢复力向量}{14}{subsubsection.2.2.4.4}%
+\contentsline {subsection}{\numberline {2.2.5}简化名义模型汇总}{14}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}本章小结}{15}{section.2.3}%
+\contentsline {chapter}{\numberline {第 3 章}高精度运动控制算法设计}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}控制架构设计原则}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}姿态控制：SQRT-PID双环结构设计}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}平方根位置环与抗饱和策略}{17}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}角速度PID反馈环}{17}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}平移运动速度控制策略}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.4}基于物理特性的动力学前馈补偿}{18}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}基于简化模型的前馈}{18}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}基于ESO的扰动前馈}{18}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}总前馈力矩}{18}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}过驱动系统的推力分配逻辑}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}推力分配矩阵的推导}{19}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}基于伪逆的最小能耗解算}{19}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}本章小结}{19}{section.3.6}%
+\contentsline {chapter}{\numberline {第 4 章}核心硬件平台研发与嵌入式软件开发}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}嵌入式控制核心与系统集成}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}推进器驱动与底层通信协议}{21}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}DSHOT通信协议实现}{22}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}转速回传与推力曲线拟合}{22}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}软件开发与后续改进}{22}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}智能电源监控与保护系统设计}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}基于LM5069的过压/欠压保护机制}{23}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}涓流缓启动与浪涌电流抑制实现}{23}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}本章小结}{24}{section.4.4}%
+\contentsline {chapter}{\numberline {第 5 章}控制系统仿真验证与分析}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}基于MATLAB/Simulink的仿真环境搭建}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}推进器模型与传感器噪声模拟}{25}{section.5.2}%
+\contentsline {section}{\numberline {5.3}复杂工况下的算法鲁棒性分析}{25}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}恒定流扰动下的定位精度测试}{25}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}脐带缆张力干扰下的稳定性评估}{25}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}本章小结}{25}{section.5.4}%
+\contentsline {chapter}{\numberline {第 6 章}总结与展望}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}全文总结}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.2}研究工作展望}{26}{section.6.2}%
+\contentsline {chapter}{参考文献}{27}{chapter*.12}%
+\contentsline {chapter}{致\quad 谢}{28}{section*.13}%
+\contentsline {chapter}{学术论文和科研成果目录}{29}{section*.15}%
 \contentsfinish 
 \contentsfinish 

@@ -4,20 +4,197 @@
 
 \section{控制架构设计原则}
 
+针对浅水水域中小型ROV低速、高精度作业需求以及复杂流场扰动特性，本文在前述动力学建模与简化的基础上，设计一套兼顾实时性、鲁棒性与工程可实现性的运动控制算法。控制系统总体采用分层结构，将六自由度运动分解为姿态控制与平移控制两个子系统，并结合动力学前馈补偿与推力分配实现闭环控制。
+
+控制架构设计遵循以下基本原则：
+
+\noindent\textbf{（1）解耦控制：}  
+利用ROV结构在几何与质量分布上的对称性，将姿态自由度（Roll, Pitch, Yaw）与平移自由度（Surge, Sway, Heave）进行近似解耦，分别设计控制器，从而降低多变量耦合带来的控制复杂度。
+
+\noindent\textbf{（2）分层闭环控制：}  
+姿态控制采用“角度-角速度”双闭环结构，以兼顾稳态精度与动态响应；平移控制采用速度闭环结构，适用于手动控制与定深控制需求。
+
+\noindent\textbf{（3）模型补偿：}  
+在反馈控制基础上引入动力学前馈补偿项，提前抵消惯性、阻尼及恢复力等已知物理效应，并结合ESO扰动观测器补偿未知干扰，降低反馈控制器负担，提高系统响应速度与抗扰性能。
+
+\noindent\textbf{（4）工程可实现性：}  
+控制算法需满足嵌入式平台实时运行要求，避免复杂在线优化计算，保证控制周期稳定运行。
+
+基于上述原则，系统控制流程为：
+传感器采集 $\rightarrow$ 状态估计 $\rightarrow$ 控制器计算 $\rightarrow$ 前馈补偿 $\rightarrow$ 推力分配 $\rightarrow$ 推进器执行。
+
 \section{姿态控制：SQRT-PID双环结构设计}
+
+针对ROV在浅水环境中执行抓取与悬停任务时对姿态稳定性的高要求，本文设计了一种基于平方根映射的双环PID控制结构（SQRT-PID），用于姿态控制。
+
+该控制器由角度位置环与角速度环组成，其中外环引入非线性映射以改善大误差情况下的控制性能。
 
 \subsection{平方根位置环与抗饱和策略}
 
+设期望姿态角为 $\boldsymbol{\eta}_d = [\phi_d, \theta_d, \psi_d]^T$，当前姿态角为 $\boldsymbol{\eta}$，则姿态误差为：
+\begin{equation}
+\boldsymbol{e}_{\eta} = \boldsymbol{\eta}_d - \boldsymbol{\eta}
+\end{equation}
+
+传统PID在误差较大时容易导致输出过大，从而引起执行器饱和。为此，本文在位置环中引入平方根非线性映射：
+\begin{equation}
+\boldsymbol{\omega}_d = k_p \cdot \mathrm{sign}(\boldsymbol{e}_{\eta}) \cdot \sqrt{|\boldsymbol{e}_{\eta}|}
+\end{equation}
+
+其中：
+- $k_p$ 为比例增益
+- $\boldsymbol{\omega}_d$ 为期望角速度
+
+该映射具有以下特点：
+- 大误差时输出增长减缓，抑制控制饱和
+- 小误差时保持较高灵敏度，提高稳态精度
+
+因此可在无需复杂限幅策略的情况下实现抗饱和控制。
+
 \subsection{角速度PID反馈环}
+
+角速度环用于跟踪期望角速度，其误差定义为：
+\begin{equation}
+\boldsymbol{e}_{\omega} = \boldsymbol{\omega}_d - \boldsymbol{\omega}
+\end{equation}
+
+控制输出为：
+\begin{equation}
+\boldsymbol{\tau}_{fb} = K_p \boldsymbol{e}_{\omega}
++ K_i \int \boldsymbol{e}_{\omega} dt
++ K_d \frac{d\boldsymbol{e}_{\omega}}{dt}
+\end{equation}
+
+该环节提供高频反馈调节能力，使系统具备良好的动态响应与抗扰能力。
 
 \section{平移运动速度控制策略}
 
-\section{基于物理特性的动力学前馈补偿}
+对于平移自由度（Surge, Sway, Heave），采用速度闭环控制策略。
+
+设期望速度为 $\boldsymbol{v}_d$，实际速度为 $\boldsymbol{v}$，则误差为：
+\begin{equation}
+\boldsymbol{e}_v = \boldsymbol{v}_d - \boldsymbol{v}
+\end{equation}
+
+控制输出为：
+\begin{equation}
+\boldsymbol{F}_{fb} = K_p \boldsymbol{e}_v
++ K_i \int \boldsymbol{e}_v dt
++ K_d \frac{d\boldsymbol{e}_v}{dt}
+\end{equation}
+
+该结构简单、计算量低，适用于嵌入式系统实时控制，同时能够满足定深控制与低速移动需求。
+
+\section{基于物理模型的动力学前馈补偿}
+
+基于第二章简化动力学模型，本文在控制器中引入前馈补偿项，用于抵消已知动力学影响，并结合扰动观测器预测未知干扰，从而提升前馈补偿的整体精度与鲁棒性。
+
+\subsection{基于简化模型的前馈}
+
+根据简化模型：
+\begin{equation}
+\boldsymbol{M}\dot{\boldsymbol{\nu}} + \boldsymbol{D}\boldsymbol{\nu} + \boldsymbol{g}(\boldsymbol{\eta}) = \boldsymbol{\tau} + \boldsymbol{d},
+\end{equation}
+其中$\boldsymbol{d}$为集总未知扰动。基于已知模型项构造的前馈为：
+\begin{equation}
+\boldsymbol{\tau}_{ff}^{\mathrm{m}} =
+\boldsymbol{M}\dot{\boldsymbol{\nu}}_d +
+\boldsymbol{D}\boldsymbol{\nu}_d +
+\boldsymbol{g}(\boldsymbol{\eta}).
+\end{equation}
+该项用于提前补偿惯性效应、线性阻尼和恢复力，为反馈控制提供更小的误差输入。
+
+通过对模型前馈的引入，能够提前补偿系统的惯性滞后和流体阻力等已知物理效应，减轻反馈控制器的调节负担，提高系统的响应速度和稳态精度。
+
+\subsection{基于ESO的扰动前馈}
+
+实际工况中，海流、线缆张力及模型参数不确定性等未知扰动仍会影响控制效果。为此，引入扩张状态观测器（ESO），将未知扰动视为扩展状态并在线估计，从而实现额外前馈补偿。
+
+ESO结构可表示为：
+\begin{align}
+    \dot{\hat{\boldsymbol{\nu}}}
+    &= \boldsymbol{M}^{-1}
+    \left(
+    \boldsymbol{\tau}
+    -\boldsymbol{D}\boldsymbol{\nu}
+    -\boldsymbol{g}(\boldsymbol{\eta})
+    +\hat{\boldsymbol{d}}
+    \right)
+    + \boldsymbol{L}_1
+    \left(\boldsymbol{\nu}-\hat{\boldsymbol{\nu}}\right),
+    \\
+    \dot{\hat{\boldsymbol{d}}}
+    &= \boldsymbol{L}_2
+    \left(\boldsymbol{\nu}-\hat{\boldsymbol{\nu}}\right),
+\end{align}
+其中$\hat{\boldsymbol{\nu}}$为观测器对速度的估计，$\hat{\boldsymbol{d}}$为扰动估计，$\boldsymbol{L}_1,\boldsymbol{L}_2$为ESO增益矩阵。
+
+基于观测器输出的扰动前馈为：
+\begin{equation}
+    \boldsymbol{\tau}_{ff}^{\mathrm{d}} = -\hat{\boldsymbol{d}}.
+\end{equation}
+该补偿使前馈不仅依赖于简化模型，还能实时动态补偿未知扰动和简化模型中舍弃的高阶与难以建模的动态。
+
+\subsection{总前馈力矩}
+
+将模型前馈与扰动前馈合成，可得到最终前馈力矩：
+\begin{equation}
+    \boldsymbol{\tau}_{ff} =
+    \boldsymbol{\tau}_{ff}^{\mathrm{m}} +
+    \boldsymbol{\tau}_{ff}^{\mathrm{d}}
+    =
+    \boldsymbol{M}\dot{\boldsymbol{\nu}}_d +
+    \boldsymbol{D}\boldsymbol{\nu}_d +
+    \boldsymbol{g}(\boldsymbol{\eta}) - \hat{\boldsymbol{d}}.
+\end{equation}
+
+最终控制律为：
+\begin{equation}
+    \boldsymbol{\tau} =
+    \boldsymbol{\tau}_{fb} + \boldsymbol{\tau}_{ff}.
+\end{equation}
+
+该复合前馈补偿的优势在于：既补偿已知模型项，又动态抵消未知扰动；减轻反馈环对外部干扰和模型误差的调节压力；提高低速悬停与姿态跟踪时的鲁棒性。
 
 \section{过驱动系统的推力分配逻辑}
 
+由于ROV采用8推进器布局，系统属于过驱动系统，需要将六维力映射到8个推进器。
+
 \subsection{推力分配矩阵的推导}
+
+设第 $i$ 个推进器位置为 $\boldsymbol{r}_i$，推力方向为 $\boldsymbol{d}_i$，则其对系统的贡献为：
+\begin{equation}
+\boldsymbol{\tau}_i =
+\begin{bmatrix}
+\boldsymbol{d}_i \\
+\boldsymbol{r}_i \times \boldsymbol{d}_i
+\end{bmatrix}
+u_i
+\end{equation}
+
+构建推力分配矩阵：
+\begin{equation}
+\boldsymbol{\tau} = \boldsymbol{B} \boldsymbol{u}
+\end{equation}
+
+其中：
+- $\boldsymbol{B} \in \mathbb{R}^{6\times 8}$
+- $\boldsymbol{u}$ 为推进器推力向量
 
 \subsection{基于伪逆的最小能耗解算}
 
+由于系统为过驱动系统，采用Moore-Penrose伪逆求解：
+\begin{equation}
+\boldsymbol{u} = \boldsymbol{B}^+ \boldsymbol{\tau}
+\end{equation}
+
+其中：
+\begin{equation}
+\boldsymbol{B}^+ = \boldsymbol{B}^T (\boldsymbol{B}\boldsymbol{B}^T)^{-1}
+\end{equation}
+
+该解具有最小二乘意义下的最小能耗特性。
+
 \section{本章小结}
+
+本章在简化动力学模型基础上，设计了适用于浅水小型ROV的高精度运动控制算法。首先提出分层解耦控制架构，分别构建姿态与平移控制回路；在姿态控制中引入SQRT-PID双环结构，提高系统抗饱和能力与控制精度；在平移控制中采用速度闭环实现稳定跟踪；进一步结合动力学前馈补偿，提高系统响应速度与鲁棒性；最后针对过驱动推进系统，构建推力分配矩阵并基于伪逆实现最优解算。上述方法为后续仿真验证与实机实验提供了理论基础。

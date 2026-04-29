@@ -1,23 +1,421 @@
 % !TEX root = ../main.tex
 
-\chapter{ROV系统总体设计与建模理论}
-
-\section{ROV总体系统架构}
-
-\subsection{模块化系统组成}
-
-\subsection{推进器矢量布局分析}
+\chapter{ROV系统建模}
 
 \section{六自由度动力学建模理论}
 
 \subsection{坐标系建立与运动状态描述}
 
-\subsection{完整动力学方程（Fossen模型）}
+为了准确描述ROV在三维水域中的运动状态，本文建立地球固定坐标系与载体固定坐标系两套参考系。地球固定坐标系采用北东天坐标系，用于描述ROV相对于外部环境的绝对位置和姿态，是路径规划、任务调度和状态显示的参考基准。
+载体固定坐标系则固连于ROV本体，其坐标轴与机体主轴方向一致，用于描述线速度、角速度以及推进器产生的力与力矩。
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/Frame.png}
+    \caption{ROV坐标系建立示意图（地球坐标系与体坐标系）}
+    \label{fig:frame}
+\end{figure}
+
+设地球固定坐标系下的位置与姿态向量为
+\begin{equation}
+    \boldsymbol{\eta}=
+    \begin{bmatrix}
+        \boldsymbol{\eta}_1^T & \boldsymbol{\eta}_2^T
+    \end{bmatrix}^{T}=
+    \begin{bmatrix}
+        x & y & z & \phi & \theta & \psi
+    \end{bmatrix}^{T},
+\end{equation}
+其中，$\boldsymbol{\eta}_1=[x,y,z]^T$为地球坐标系下的位置坐标，$\boldsymbol{\eta}_2=[\phi,\theta,\psi]^T$为欧拉角表示的姿态，分别对应横滚角、俯仰角和偏航角。设体坐标系下的速度向量为
+\begin{equation}
+    \boldsymbol{\nu}=
+    \begin{bmatrix}
+        \boldsymbol{\nu}_1^T & \boldsymbol{\nu}_2^T
+    \end{bmatrix}^{T}=
+    \begin{bmatrix}
+        u & v & w & p & q & r
+    \end{bmatrix}^{T},
+\end{equation}
+其中，$\boldsymbol{\nu}_1=[u,v,w]^T$表示纵荡、横荡和垂荡线速度，$\boldsymbol{\nu}_2=[p,q,r]^T$表示绕体坐标系$x$、$y$、$z$轴的角速度。相应地，体坐标系下的广义力与力矩向量表示为
+\begin{equation}
+    \boldsymbol{\tau}=
+    \begin{bmatrix}
+        \boldsymbol{\tau}_1^T & \boldsymbol{\tau}_2^T
+    \end{bmatrix}^{T}=
+    \begin{bmatrix}
+        X & Y & Z & K & M & N
+    \end{bmatrix}^{T},
+\end{equation}
+其中$\boldsymbol{\tau}_1=[X,Y,Z]^T$为作用力，$\boldsymbol{\tau}_2=[K,M,N]^T$为作用力矩。
+
+% 由于位置姿态向量与速度向量分别定义在不同参考系中，两者之间需通过坐标变换矩阵建立联系。ROV的运动学方程可写为
+% \begin{equation}
+%     \dot{\boldsymbol{\eta}}=\boldsymbol{J}(\boldsymbol{\eta})\boldsymbol{\nu},
+% \end{equation}
+% 其中，$\boldsymbol{J}(\boldsymbol{\eta})$为由姿态角决定的雅可比变换矩阵，可进一步分解为平移部分的旋转矩阵和姿态角速度变换矩阵。需要说明的是，欧拉角表示在$\theta=\pm 90^\circ$附近存在奇异性，
+% 因此本文默认ROV工作在常规姿态范围内，不考虑极端俯仰工况。
+
+\subsection{完整动力学方程}
+
+基于Fossen提出的水下机器人统一建模理论\cite{fossen2011handbook}，ROV在体坐标系下的六自由度动力学方程可表示为
+\begin{equation}
+    \boldsymbol{M}\dot{\boldsymbol{\nu}}
+    +\boldsymbol{C}(\boldsymbol{\nu})\boldsymbol{\nu}
+    +\boldsymbol{D}(\boldsymbol{\nu})\boldsymbol{\nu}
+    +\boldsymbol{g}(\boldsymbol{\eta})
+    =
+    \boldsymbol{\tau}
+    +\boldsymbol{\tau}_{d},
+    \label{eq:fossen_model}
+\end{equation}
+其中，$\boldsymbol{M}$为系统惯性矩阵，$\boldsymbol{C}(\boldsymbol{\nu})$为科里奥利与向心力矩阵，$\boldsymbol{D}(\boldsymbol{\nu})$为水动力阻尼矩阵，$\boldsymbol{g}(\boldsymbol{\eta})$为由重力和浮力引起的恢复力向量，
+$\boldsymbol{\tau}$为控制输入，$\boldsymbol{\tau}_{d}$为海流、线缆张力及未建模动力学等外部扰动。以下对各项的物理含义与数学结构进行详细阐述。
+
+\subsubsection{惯性矩阵}
+
+惯性矩阵由刚体惯性矩阵与附加质量矩阵组成，即
+\begin{equation}
+    \boldsymbol{M}=\boldsymbol{M}_{RB}+\boldsymbol{M}_{A}.
+\end{equation}
+
+刚体惯性矩阵$\boldsymbol{M}_{RB}$反映ROV本体的质量和转动惯量特性。为简化后续公式表达，首先引入反对称矩阵算子。对于任意三维向量$\boldsymbol{a}=[a_1,a_2,a_3]^T$，其反对称矩阵定义为
+\begin{equation}
+    \boldsymbol{S}(\boldsymbol{a})=
+    \begin{bmatrix}
+        0 & -a_3 & a_2 \\
+        a_3 & 0 & -a_1 \\
+        -a_2 & a_1 & 0
+    \end{bmatrix},
+    \label{eq:skew_symmetric}
+\end{equation}
+该算子满足$\boldsymbol{S}(\boldsymbol{a})\boldsymbol{b}=\boldsymbol{a}\times\boldsymbol{b}$，即向量叉乘运算的矩阵表达形式。
+
+利用反对称矩阵算子，刚体惯性矩阵可表示为分块形式
+\begin{equation}
+    \boldsymbol{M}_{RB}=
+    \begin{bmatrix}
+        m\boldsymbol{I}_{3\times3} & -m\boldsymbol{S}(\boldsymbol{r}_G) \\
+        m\boldsymbol{S}(\boldsymbol{r}_G) & \boldsymbol{I}_b
+    \end{bmatrix},
+    \label{eq:M_RB_block}
+\end{equation}
+其中$m$为ROV总质量，$\boldsymbol{r}_G=[x_G,y_G,z_G]^T$为重心相对于体坐标系原点的位置向量，$\boldsymbol{I}_{3\times3}$为$3\times 3$单位矩阵，$\boldsymbol{I}_b$为相对于体坐标系原点的惯性张量。
+将式~\eqref{eq:M_RB_block}展开为完整的$6\times6$矩阵形式：
+\begin{equation}
+    \boldsymbol{M}_{RB}=
+    \begin{bmatrix}
+        m & 0 & 0 & 0 & mz_G & -my_G \\
+        0 & m & 0 & -mz_G & 0 & mx_G \\
+        0 & 0 & m & my_G & -mx_G & 0 \\
+        0 & -mz_G & my_G & I_x & -I_{xy} & -I_{xz} \\
+        mz_G & 0 & -mx_G & -I_{yx} & I_y & -I_{yz} \\
+        -my_G & mx_G & 0 & -I_{zx} & -I_{zy} & I_z
+    \end{bmatrix}.
+    \label{eq:M_RB_full}
+\end{equation}
+可以看出，左上角$3\times3$子矩阵为平移惯性项，右下角$3\times3$子矩阵为旋转惯性项，而非对角块$-m\boldsymbol{S}(\boldsymbol{r}_G)$与$m\boldsymbol{S}(\boldsymbol{r}_G)$反映了当重心与体坐标系原点不重合时，
+平移运动与旋转运动之间产生的惯性耦合效应。
+
+附加质量矩阵$\boldsymbol{M}_A$描述的是ROV在水中加速时带动周围流体一起运动所表现出的附加惯性效应。附加质量矩阵的一般形式为
+\begin{equation}
+    \boldsymbol{M}_{A}=
+    -\begin{bmatrix}
+        X_{\dot{u}} & X_{\dot{v}} & X_{\dot{w}} & X_{\dot{p}} & X_{\dot{q}} & X_{\dot{r}} \\
+        Y_{\dot{u}} & Y_{\dot{v}} & Y_{\dot{w}} & Y_{\dot{p}} & Y_{\dot{q}} & Y_{\dot{r}} \\
+        Z_{\dot{u}} & Z_{\dot{v}} & Z_{\dot{w}} & Z_{\dot{p}} & Z_{\dot{q}} & Z_{\dot{r}} \\
+        K_{\dot{u}} & K_{\dot{v}} & K_{\dot{w}} & K_{\dot{p}} & K_{\dot{q}} & K_{\dot{r}} \\
+        M_{\dot{u}} & M_{\dot{v}} & M_{\dot{w}} & M_{\dot{p}} & M_{\dot{q}} & M_{\dot{r}} \\
+        N_{\dot{u}} & N_{\dot{v}} & N_{\dot{w}} & N_{\dot{p}} & N_{\dot{q}} & N_{\dot{r}}
+    \end{bmatrix}
+    =
+    -\begin{bmatrix}
+        \boldsymbol{A}_{11} & \boldsymbol{A}_{12} \\
+        \boldsymbol{A}_{21} & \boldsymbol{A}_{22}
+    \end{bmatrix},
+    \label{eq:M_A_full}
+\end{equation}
+其中各元素如$X_{\dot{u}},Y_{\dot{v}}$等为流体力导数（hydrodynamic derivative），物理含义为指定方向的力（或力矩）对相应加速度（或角加速度）的偏导数。子矩阵$\boldsymbol{A}_{11}$表示平动加速度引起的附加质量力，$\boldsymbol{A}_{22}$表示旋转角加速度引起的附加质量力矩，$\boldsymbol{A}_{12}$和$\boldsymbol{A}_{21}$分别表示旋转与平动之间的交叉耦合附加质量效应。在理想流体条件下，附加质量矩阵具有对称性，即$\boldsymbol{M}_A=\boldsymbol{M}_A^T$。
+
+\subsubsection{科里奥利与向心力矩阵}
+
+科里奥利与向心力矩阵描述了旋转体坐标系下平动与转动之间的非线性耦合效应。该矩阵同样包含刚体部分与附加质量部分：
+\begin{equation}
+    \boldsymbol{C}(\boldsymbol{\nu})=
+    \boldsymbol{C}_{RB}(\boldsymbol{\nu})+
+    \boldsymbol{C}_{A}(\boldsymbol{\nu}).
+\end{equation}
+
+刚体部分的科里奥利与向心力矩阵可利用反对称算子表示为
+\begin{equation}
+    \boldsymbol{C}_{RB}(\boldsymbol{\nu})=
+    \begin{bmatrix}
+        \boldsymbol{0}_{3\times3} & -\boldsymbol{S}(\boldsymbol{M}_{11}\boldsymbol{\nu}_1+\boldsymbol{M}_{12}\boldsymbol{\nu}_2) \\
+        -\boldsymbol{S}(\boldsymbol{M}_{11}\boldsymbol{\nu}_1+\boldsymbol{M}_{12}\boldsymbol{\nu}_2) & -\boldsymbol{S}(\boldsymbol{M}_{21}\boldsymbol{\nu}_1+\boldsymbol{M}_{22}\boldsymbol{\nu}_2)
+    \end{bmatrix},
+    \label{eq:C_RB}
+\end{equation}
+其中$\boldsymbol{M}_{11}=m\boldsymbol{I}_{3\times3}$，$\boldsymbol{M}_{12}=-m\boldsymbol{S}(\boldsymbol{r}_G)$，$\boldsymbol{M}_{21}=m\boldsymbol{S}(\boldsymbol{r}_G)$，$\boldsymbol{M}_{22}=\boldsymbol{I}_b$分别为刚体惯性矩阵的四个分块子矩阵。
+
+附加质量部分的科里奥利与向心力矩阵具有类似的分块结构：
+\begin{equation}
+    \boldsymbol{C}_{A}(\boldsymbol{\nu})=
+    \begin{bmatrix}
+        \boldsymbol{0}_{3\times3} & -\boldsymbol{S}(\boldsymbol{A}_{11}\boldsymbol{\nu}_1+\boldsymbol{A}_{12}\boldsymbol{\nu}_2) \\
+        -\boldsymbol{S}(\boldsymbol{A}_{11}\boldsymbol{\nu}_1+\boldsymbol{A}_{12}\boldsymbol{\nu}_2) & -\boldsymbol{S}(\boldsymbol{A}_{21}\boldsymbol{\nu}_1+\boldsymbol{A}_{22}\boldsymbol{\nu}_2)
+    \end{bmatrix},
+    \label{eq:C_A}
+\end{equation}
+其中$\boldsymbol{A}_{11},\boldsymbol{A}_{12},\boldsymbol{A}_{21},\boldsymbol{A}_{22}$为附加质量矩阵的对应分块子矩阵。当ROV进行转向、耦合运动或多自由度联动时，科里奥利与向心力项将对动力学响应产生显著影响，特别是在高速运动工况下。
+
+\subsubsection{水动力阻尼矩阵}
+
+ROV在水中运动受到的流体阻尼力是影响其动态特性的重要因素。阻尼矩阵通常由线性阻尼与二次阻尼叠加构成：
+\begin{equation}
+    \boldsymbol{D}(\boldsymbol{\nu})
+    =
+    \boldsymbol{D}_{L}
+    +
+    \boldsymbol{D}_{Q}(\boldsymbol{\nu}).
+\end{equation}
+其中线性阻尼$\boldsymbol{D}_{L}$对应低雷诺数下的粘性摩擦效应，在低速工况下占主导；二次阻尼$\boldsymbol{D}_{Q}(\boldsymbol{\nu})$对应高雷诺数下的压差阻力，在高速运动时更为显著。
+
+在实际建模中，利用平台结构对称性对各自由度进行解耦，阻尼矩阵可简化为对角形式。以$x$轴平动方向为例，对角元素由线性阻尼导数与二次阻尼导数组成：
+\begin{equation}
+    \boldsymbol{D}(\boldsymbol{\nu})\approx
+    -\mathrm{diag}
+    \left\{
+    \begin{array}{l}
+        X_u+X_{u|u|}|u|,\;
+        Y_v+Y_{v|v|}|v|,\;
+        Z_w+Z_{w|w|}|w|,\\
+        K_p+K_{p|p|}|p|,\;
+        M_q+M_{q|q|}|q|,\;
+        N_r+N_{r|r|}|r|
+    \end{array}
+    \right\},
+    \label{eq:D_full_diag}
+\end{equation}
+其中$X_u$为线性水动力导数，$X_{u|u|}$为二次方水动力导数，$|u|$为速度绝对值项，保证阻尼力始终与运动方向相反从而耗散系统能量。其他五个自由度的阻尼导数含义类比可得。
+
+\subsubsection{恢复力向量}
+
+恢复力向量由重力$W=mg$和浮力$B=\rho g\nabla$共同产生，其中$\nabla$为ROV的排水体积。设重心坐标为$(x_G,y_G,z_G)$，浮心坐标为$(x_B,y_B,z_B)$，则完整的恢复力向量表达式为
+\begin{equation}
+    \boldsymbol{g}(\boldsymbol{\eta})=
+    \begin{bmatrix}
+        (W-B)\sin\theta \\
+        -(W-B)\cos\theta\sin\phi \\
+        -(W-B)\cos\theta\cos\phi \\
+        -(y_GW-y_BB)\cos\theta\cos\phi+(z_GW-z_BB)\cos\theta\sin\phi \\
+        (z_GW-z_BB)\sin\theta+(x_GW-x_BB)\cos\theta\cos\phi \\
+        -(x_GW-x_BB)\cos\theta\sin\phi-(y_GW-y_BB)\sin\theta
+    \end{bmatrix}.
+    \label{eq:g_full}
+\end{equation}
+前三个分量为重力与浮力在体坐标系三个平移方向上的投影，后三个分量为重力和浮力绕体坐标系三轴产生的力矩。当重心位于浮心下方时，系统可在一定范围内获得被动静稳性，即当ROV发生横滚或俯仰偏转时，重浮力差会自动产生恢复力矩。
 
 \section{实际工况下的简化动力学模型}
 
-\subsection{惯性矩阵、阻尼矩阵的化简与对角化处理}
+尽管完整六自由度动力学模型能够较全面地刻画ROV的运动特性，但直接将其用于嵌入式控制实现会面临参数多、计算量大、模型不确定性强等问题。考虑到本文研究对象主要执行浅水环境下的低速巡检、悬停与近距离精细作业任务，
+为提高控制算法在STM32F4等资源受限平台上的实时性，有必要在保留主要动力学特征的前提下，对完整模型进行合理简化。
+
+本文简化遵循以下基本假设：
+
+\noindent\textbf{假设一（低速运动假设）：}ROV主要工作在低速巡检状态（特征速度$<0.5\;\mathrm{m/s}$），此时可忽略部分高阶流体非线性项。
+
+\noindent\textbf{假设二（平稳流体环境假设）：}将时变海流和复杂外界干扰统一视为外部扰动项$\boldsymbol{\tau}_d$，由后续的扰动观测器进行补偿。
+
+\subsection{惯性矩阵的化简与对角化处理}
+
+惯性矩阵是描述ROV运动惯性的核心参数。为满足实时控制需求，本文从硬件布局和结构对称性方面对其进行简化。
+
+\subsubsection{刚体惯性矩阵的化简}
+
+% TODO: 这里把那个大连理工的ICRA的MPC水下机器人引用了
+
+首先，在机械与电气系统布置阶段，通过对电池、耐压舱、控制板及配重模块进行合理排布，使体坐标系原点尽可能与系统重心重合，即满足
+\begin{equation}
+    \boldsymbol{r}_{G}\approx \boldsymbol{0}.
+\end{equation}
+在该条件下，式~\eqref{eq:M_RB_block}中由反对称矩阵算子$\boldsymbol{S}(\boldsymbol{r}_G)$产生的平移与转动耦合项$\boldsymbol{M}_{12}=-m\boldsymbol{S}(\boldsymbol{r}_G)$和$\boldsymbol{M}_{21}=m\boldsymbol{S}(\boldsymbol{r}_G)$近似为零矩阵，刚体惯性矩阵退化为分块对角形式：
+\begin{equation}
+    \boldsymbol{M}_{RB}\approx
+    \begin{bmatrix}
+        m\boldsymbol{I}_{3\times3} & \boldsymbol{0}_{3\times3} \\
+        \boldsymbol{0}_{3\times3} & \boldsymbol{I}_b
+    \end{bmatrix}.
+\end{equation}
+
+其次，本文ROV采用前后、左右近似对称的结构设计，八推进器亦呈规则分布。该几何对称性使主轴惯性占主导，非对角惯性积$I_{xy},I_{xz},I_{yz}$相对较小，可近似忽略。因此刚体惯性张量$\boldsymbol{I}_b$可进一步简化为仅包含主轴转动惯量的对角阵：
+\begin{equation}
+    \boldsymbol{I}_b \approx \mathrm{diag}\{I_x,I_y,I_z\},
+\end{equation}
+从而刚体惯性矩阵最终化简为
+\begin{equation}
+    \boldsymbol{M}_{RB}\approx
+    \mathrm{diag}
+    \left\{
+        m,m,m,I_{x},I_{y},I_{z}
+    \right\}.
+\end{equation}
+
+\subsubsection{附加质量矩阵的化简}
+
+对于附加质量矩阵，考虑到本文ROV平台具有三个近似正交的对称平面（水平面、纵剖面和横剖面），在流体动力学中，具有此种对称特征的物体在单一方向加速时，所诱导的其他自由度附加质量力极弱。例如，在$x$方向加速运动时，所产生的$y$方向附加力矩几乎为零。
+
+参照Fossen对低速、对称潜水器的经验处理方法\cite{fossen2011handbook}，忽略附加质量矩阵中的非对角项（交叉流体力导数），将其近似表示为
+
+% TODO: 这里的简化方法可以参考一下那个大连理工的ICRA的MPC水下机器人，看看他们是怎么处理附加质量矩阵的。或者找点别的理由去充分说明化简理由
+
+\begin{equation}
+    \boldsymbol{M}_{A}\approx
+    -\mathrm{diag}
+    \left\{
+        X_{\dot{u}},Y_{\dot{v}},Z_{\dot{w}},K_{\dot{p}},M_{\dot{q}},N_{\dot{r}}
+    \right\}.
+\end{equation}
+该简化不仅有效减少了需辨识的参数数量（从36个降至6个），同时避免了大量难以通过实验准确标定的交叉流体力导数对模型精度的不利影响。
+
+\subsubsection{总惯性矩阵的最终形式}
+
+综合刚体惯性矩阵与附加质量矩阵的化简结果，系统总惯性矩阵可表示为常数对角阵
+
+\begin{equation}
+    \boldsymbol{M}\approx
+    \mathrm{diag}
+    \left\{
+        m-X_{\dot{u}},\,
+        m-Y_{\dot{v}},\,
+        m-Z_{\dot{w}},\,
+        I_x-K_{\dot{p}},\,
+        I_y-M_{\dot{q}},\,
+        I_z-N_{\dot{r}}
+    \right\}.
+    \label{eq:M_simplified}
+\end{equation}
+该形式的逆矩阵同样为对角阵，各对角元素取倒数即可获得，无需进行复杂的矩阵求逆运算，有利于控制律的实时计算。
+
+\subsection{科里奥利与向心力矩阵的简化处理}
+
+科里奥利与向心力描述了旋转体坐标系下由线速度与角速度耦合产生的惯性力效应，其量级与速度的平方成正比。本文ROV主要执行近距离精细抓取与低速巡检任务，在该工况下对科里奥利力进行如下分项处理。
+
+对于刚体部分$\boldsymbol{C}_{RB}(\boldsymbol{\nu})$：由于已在硬件设计中确保重心与体坐标系原点近似重合，式~\eqref{eq:C_RB}中由耦合子矩阵$\boldsymbol{M}_{12}$、$\boldsymbol{M}_{21}$引起的复杂非线性项在物理层面已被有效消除。
+加之低速运动条件下科里奥利力的量级远小于推进器推力和流体阻力，其对系统动力学响应的影响可以忽略，因此将刚体科里奥利力矩阵近似设为零矩阵：
+\begin{equation}
+    \boldsymbol{C}_{RB}(\boldsymbol{\nu})\approx \boldsymbol{0}_{6\times6}.
+\end{equation}
+
+% TODO:附加质量的科里奥利力的化简需要补充引用和简化理由
+
+对于附加质量部分$\boldsymbol{C}_{A}(\boldsymbol{\nu})$：该项具有时变非线性特征，其参数随流场条件和运动状态变化，难以通过离线实验精确标定。将其保留在名义模型中不仅增加计算复杂度，还可能因参数偏差引入额外的模型误差。
+因此，本文将附加质量科里奥利力项归入总扰动$\boldsymbol{\tau}_d$中，由后续反馈控制和扰动观测器统一进行补偿：
+\begin{equation}
+    \boldsymbol{C}_{A}(\boldsymbol{\nu})\boldsymbol{\nu} \rightarrow \boldsymbol{\tau}_d.
+\end{equation}
+
+\subsection{阻尼矩阵的线性化与对角化处理}
+
+\subsubsection{线性化处理}
+
+% TODO：补充线性化处理的理论依据和简化理由
+
+% TODO: 阻尼参数的二次项似乎没有必要简化，只是在MPC中需要简化，如果仅仅需
+
+本文ROV主要以低速状态执行水下定位、悬停和机械臂抓取任务，此时流动对应的雷诺数较低，粘性线性阻尼占主导地位，而与速度平方成正比的二次阻尼（压差阻力）对系统动力学的影响显著下降。因此忽略式~\eqref{eq:D_full_diag}中的二次阻尼项，
+将阻尼矩阵近似化为线性形式：
+\begin{equation}
+    \boldsymbol{D}(\boldsymbol{\nu})\approx \boldsymbol{D}_{L}.
+\end{equation}
+
+% TODO: 解释共线性问题，标定问题（引用相关文章）
+线性化处理同时也便于后续的系统阻尼参数辨识，避免了同时标定线性和二次阻尼参数时的共线性问题。
+
+\subsubsection{对角化处理}
+
+% TODO:补充流体力学背景知识和文献
+
+本文ROV具有明显的三平面对称构型。从流体力学角度分析，对称结构在单一方向运动时，所诱导的其他自由度交叉阻尼极小，可以忽略。从系统辨识角度分析，完整的$6\times6$阻尼矩阵包含36个未知参数，通过实验逐一标定几乎不可行；
+简化为对角阵后，仅需针对6个主自由度分别进行阶跃响应实验即可获得准确参数。因此将线性阻尼矩阵进一步简化为对角矩阵：
+\begin{equation}
+    \boldsymbol{D}_{L}\approx
+    -\mathrm{diag}
+    \left\{
+        X_{u},Y_{v},Z_{w},K_{p},M_{q},N_{r}
+    \right\}.
+    \label{eq:D_simplified}
+\end{equation}
+这样不仅能够降低系统辨识难度，也便于后续构建模型前馈补偿项。
 
 \subsection{恢复力向量的物理约束化简}
 
+恢复力向量主要由重力和浮力共同作用产生，其大小和方向与重心、浮心位置及姿态角密切相关。为了增强ROV在浅水悬停与低速作业中的被动稳定性，本文在机械总体设计中对浮力与配重进行了针对性布置，并据此对恢复力向量进行物理约束化简。
+
+\subsubsection{中性浮力设计}
+
+系统采用近似中性浮力设计，通过精确调节浮力材料和载荷分布，使整机满足
+\begin{equation}
+    W \approx B.
+\end{equation}
+该设计能够消除升沉方向上的静态偏置，使ROV在定深控制中无需长期输出较大恒定推力，从而有利于降低能耗并提高控制精度。代入式~\eqref{eq:g_full}，恢复力向量的前三个平移分量近似为零。
+
+\subsubsection{重心浮心共线设计}
+
+在结构布局上尽量保证重心与浮心在$x$、$y$方向近似共线，即满足
+\begin{equation}
+    x_G \approx x_B,\qquad y_G \approx y_B.
+\end{equation}
+这样可减少由于横向偏置引起的额外静力矩，使恢复力主要作用于姿态自稳，而不会引入明显的平移耦合。
+
+\subsubsection{深重心布局}
+
+为获得良好的静稳性，系统采用"深重心"布局，即通过底部配重使重心位于浮心下方，满足
+\begin{equation}
+    z_G < z_B
+\end{equation}
+（在世界坐标系下，向上为正方向）。该布局使ROV在发生横滚或俯仰偏转时能够产生恢复力矩，从而在无控制或弱控制状态下仍具备一定的自扶正能力。
+
+% TODO: 补充说明李雅普诺夫稳定性
+
+\subsubsection{简化后的恢复力向量}
+
+将上述约束条件$W\approx B$、$x_G\approx x_B$、$y_G\approx y_B$代入式~\eqref{eq:g_full}，并记重心与浮心的垂向距离为$\Delta z=z_G-z_B>0$，可得简化后的恢复力向量为
+\begin{equation}
+    \boldsymbol{g}(\boldsymbol{\eta})\approx
+    \begin{bmatrix}
+        0 \\
+        0 \\
+        0 \\
+        W\Delta z\cos\theta\sin\phi \\
+        W\Delta z\sin\theta \\
+        0
+    \end{bmatrix}.
+    \label{eq:g_simplified}
+\end{equation}
+可以看出，简化后恢复力仅在横滚和俯仰两个姿态自由度上保留了与重浮心垂向偏差$\Delta z$和姿态角有关的恢复力矩项，升沉和偏航方向均无恢复力作用。在小角度假设下（$\sin\phi\approx\phi$，$\cos\theta\approx 1$，$\sin\theta\approx\theta$），
+恢复力矩可进一步线性化为与$\phi$、$\theta$成正比的线性项，便于后续姿态稳定控制和模型前馈补偿设计。
+
+\subsection{简化名义模型汇总}
+
+综合上述各项简化结果，本文用于控制器设计的名义动力学模型可写为
+\begin{equation}
+    \hat{\boldsymbol{M}}\dot{\boldsymbol{\nu}}
+    +\hat{\boldsymbol{D}}\boldsymbol{\nu}
+    +\hat{\boldsymbol{g}}(\boldsymbol{\eta})
+    =\boldsymbol{\tau}+\boldsymbol{d},
+    \label{eq:simplified_model}
+\end{equation}
+其中$\hat{\boldsymbol{M}}$为式~\eqref{eq:M_simplified}所示的对角惯性矩阵，$\hat{\boldsymbol{D}}$为式~\eqref{eq:D_simplified}所示的对角线性阻尼矩阵，
+$\hat{\boldsymbol{g}}(\boldsymbol{\eta})$为式~\eqref{eq:g_simplified}所示的简化恢复力向量，$\boldsymbol{d}$为集总扰动项，包含被忽略的科里奥利力、二次阻尼、附加质量耦合效应、模型参数不确定性以及海流和线缆张力等外部干扰。
+
+该模型具有以下工程优势：
+（1）所有系统矩阵均为对角阵，六自由度运动方程在名义条件下彼此解耦，可独立设计控制器；
+（2）矩阵求逆仅需取对角元素倒数，大幅降低嵌入式平台的运算负荷；
+（3）各对角参数具有明确的物理含义，便于通过阶跃响应实验逐一辨识；
+（4）所有被简化的复杂动力学效应和外部扰动统一归入集总扰动项，为后续基于扰动观测器的抗扰设计提供了清晰的接口。
+
 \section{本章小结}
+
+本章围绕ROV控制系统设计需求，建立了完整的六自由度动力学模型并推导了面向嵌入式实时控制的简化名义模型。首先基于Fossen理论给出了位置姿态、速度以及广义力的统一描述形式，详细阐述了惯性矩阵、科里奥利与向心力矩阵、
+水动力阻尼矩阵和恢复力向量的物理含义与完整数学表达。在此基础上，结合浅水低速作业工况和嵌入式实时计算的工程需求，依据低速运动假设、刚体假设和平稳流体环境假设，对完整模型进行了系统简化：
+通过硬件布局保证重心与体坐标系原点重合以消除惯性耦合，利用结构对称性将惯性矩阵与阻尼矩阵对角化，低速条件下忽略科里奥利力并将附加质量非线性耦合归入集总扰动，以及在中性浮力、重心浮心共线和深重心布局约束下对恢复力向量进行物理化简。
+最终获得了以对角矩阵为核心的简化名义模型，该模型保留了主要动力学特征，同时具有解耦性好、参数可辨识、计算高效的特点，为下一章开展运动控制算法设计、模型前馈补偿及推力分配研究奠定了理论基础。

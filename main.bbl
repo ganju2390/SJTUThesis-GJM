@@ -1002,6 +1002,57 @@
       \field{dateera}{ce}
       \keyw{Hong2025Review}
     \endentry
+    \entry{fossen2011handbook}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8eca0c434dd587f3eff346c053ba5948}{%
+           family={Fossen},
+           familyi={F\bibinitperiod},
+           given={Thor\bibnamedelima I},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=8eca0c434dd587f3eff346c053ba5948}{%
+           family={Fossen},
+           familyi={F\bibinitperiod},
+           given={Thor\bibnamedelima I},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Chichester, UK}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{fullhash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{fullhashraw}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{bibnamehash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{authorbibnamehash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{authornamehash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{authorfullhash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{authorfullhashraw}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{nameabibnamehash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{nameanamehash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{nameafullhash}{8eca0c434dd587f3eff346c053ba5948}
+      \strng{nameafullhashraw}{8eca0c434dd587f3eff346c053ba5948}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Handbook of Marine Craft Hydrodynamics and Motion Control}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \keyw{fossen2011handbook}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
