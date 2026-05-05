@@ -9,9 +9,9 @@
 控制架构设计遵循以下基本原则：
 
 \noindent\textbf{（1）解耦控制：}  
-利用ROV结构在几何与质量分布上的对称性，将姿态自由度（Roll, Pitch, Yaw）与平移自由度（Surge, Sway, Heave）进行近似解耦，分别设计控制器，从而降低多变量耦合带来的控制复杂度。
+考虑到ROV在默认工作状态下通常以近水平姿态航行，可以将Roll、Pitch、Yaw之间的耦合视为次要项，从而在控制器设计中采用近似解耦策略。该工程化近似有效减小多变量耦合引入的设计复杂度和实时计算负担，同时保证姿态控制在浅水低速工况中的精度要求。
 
-\noindent\textbf{（2）分层闭环控制：}  
+\noindent\textbf{（2）分层闭环控制：}
 姿态控制采用“角度-角速度”双闭环结构，以兼顾稳态精度与动态响应；平移控制采用速度闭环结构，适用于手动控制与定深控制需求。
 
 \noindent\textbf{（3）模型补偿：}  
@@ -180,6 +180,73 @@ u_i
 其中：
 - $\boldsymbol{B} \in \mathbb{R}^{6\times 8}$
 - $\boldsymbol{u}$ 为推进器推力向量
+
+\subsection{电机布局与分布图}
+
+ROV采用8推进器冗余布局（4个垂直推进器 + 4个水平矢量推进器），属于过驱动系统。该布局有利于在浅水低速工况下实现姿态与位置控制的高精度响应，同时提供了一定的故障容错冗余。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{../figures/PropulsionLayout.png}
+  \caption{ROV推进器电机分布图}
+  \label{fig:thruster-layout}
+\end{figure}
+
+垂直推进器 $T_{1}\sim T_{4}$ 主要贡献 $Z$ 轴推力及横滚、俯仰力矩；水平矢量推进器 $T_{5}\sim T_{8}$ 主要贡献 $X$、$Y$ 轴推力及偏航力矩。
+
+设垂直推进器位置为：
+\begin{align}
+T_{1}:&~(l_{1x}, l_{1y}, 0), & T_{2}:&~(-l_{1x}, l_{1y}, 0), \\
+T_{3}:&~(-l_{1x}, -l_{1y}, 0), & T_{4}:&~(l_{1x}, -l_{1y}, 0),
+\end{align}
+其推力方向为
+\begin{equation}
+f_{i} = [0, 0, 1]^T, \quad i = 1,2,3,4.
+\end{equation}
+
+水平矢量推进器位置为：
+\begin{align}
+T_{5}:&~(l_{2x}, l_{2y}, l_{2z}), & T_{6}:&~(-l_{2x}, l_{2y}, l_{2z}), \\
+T_{7}:&~(-l_{2x}, -l_{2y}, l_{2z}), & T_{8}:&~(l_{2x}, -l_{2y}, l_{2z}),
+\end{align}
+推力方向沿 $\pm 45^{\circ}$ 水平矢量：
+\begin{equation}
+\begin{aligned}
+&f_{5} = [c, s, 0]^T,\quad f_{6} = [-c, s, 0]^T, \\
+&f_{7} = [-c, -s, 0]^T,\quad f_{8} = [c, -s, 0]^T,
+\end{aligned}
+\end{equation}
+其中 $c = \cos 45^{\circ}$, $s = \sin 45^{\circ}$.
+
+\subsection{推力分配矩阵的具体表达}
+
+对每个推进器 $i$，其对六维总力/力矩的贡献为：
+\begin{equation}
+\boldsymbol{\tau}_{i} = \begin{bmatrix}
+f_{i} \\
+S(r_{i}) f_{i}
+\end{bmatrix} u_{i}.
+\end{equation}
+
+因此，推力分配矩阵可写为：
+\begin{equation}
+\boldsymbol{B} = [\boldsymbol{\tau}_{1}, \boldsymbol{\tau}_{2}, \ldots, \boldsymbol{\tau}_{8}].
+\end{equation}
+
+对于本布局，矩阵 $\boldsymbol{B}$ 的具体形式为：
+\begin{equation}
+\boldsymbol{B} =
+\begin{bmatrix}
+0 & 0 & 0 & 0 & c & -c & -c & c \\
+0 & 0 & 0 & 0 & s & s & -s & -s \\
+1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+l_{1y} & l_{1y} & -l_{1y} & -l_{1y} & -l_{2z} s & -l_{2z} s & l_{2z} s & l_{2z} s \\
+- l_{1x} & l_{1x} & l_{1x} & - l_{1x} & l_{2z} c & - l_{2z} c & - l_{2z} c & l_{2z} c \\
+0 & 0 & 0 & 0 & l_{2x} s - l_{2y} c & - l_{2x} s - l_{2y} c & - l_{2x} s + l_{2y} c & l_{2x} s + l_{2y} c
+\end{bmatrix}.
+\end{equation}
+
+该矩阵将6维总力/力矩映射到8个推进器推力，保证过驱动系统的最优能耗分配。
 
 \subsection{基于伪逆的最小能耗解算}
 

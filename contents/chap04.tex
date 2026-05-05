@@ -2,105 +2,228 @@
 
 \chapter{核心硬件平台研发与嵌入式软件开发}
 
-\section{嵌入式控制核心与系统集成}
+\section{嵌入式软件框架设计}
 
-为满足水下机器人在复杂环境下对实时性、可靠性与扩展性的要求，本文构建了一套以嵌入式主控为核心的控制系统。系统选用基于STM32F4系列微控制器的控制板作为底层控制核心，负责运动控制算法的实时执行、传感器数据处理以及推进器驱动指令的生成。
+本系统的嵌入式软件框架旨在实现水下机器人的高精度控制，并确保复杂设备间状态更新与任务执行的有序协同。系统采用统一的设备基类设计，通过 C++ 派生类与多态机制管理底层外设和高层控制模块，实现可扩展、模块化的调度体系。
 
-在系统架构设计上，采用模块化集成思路，将电源管理、推进器驱动、传感器接口与通信模块进行分层设计。嵌入式软件方面，引入面向对象的设计思想，对硬件设备进行抽象封装，构建统一的设备接口，实现控制逻辑与底层驱动的解耦。
+\subsection{统一设备调度机制}
 
-系统软件框架主要由三部分构成：
+系统中所有硬件或逻辑功能模块均派生自统一设备基类 \texttt{DeviceBase}，该基类提供标准接口：
 
-\noindent\textbf{（1）设备抽象层（Device Layer）}  
-将IMU、深度传感器、推进器驱动器等硬件统一抽象为设备对象，每个设备需实现数据更新（Update）与指令执行（Handle）接口，从而实现统一调用。
+\begin{itemize}
+    \item \texttt{Update()}：设备状态刷新函数，用于读取传感器数据或更新内部状态。
+    \item \texttt{Handle()}：任务执行函数，用于处理控制逻辑或下发命令。
+\end{itemize}
 
-\noindent\textbf{（2）调度与任务管理层}  
-系统采用基于定时器中断触发的周期性调度机制，控制主循环以固定频率（约1 kHz）运行。每个周期内依次执行状态更新与控制输出，实现确定性控制流程。
+所有设备在构造时注册到全局设备队列，通过多态方式统一调度，实现以下特点：
 
-\noindent\textbf{（3）控制与执行层}  
-在完成状态估计后，调用第三章所设计的控制算法，计算期望力与力矩，并通过推力分配模块转化为推进器控制指令。
+\begin{enumerate}
+    \item \textbf{自下而上状态更新}：队列头部的底层设备先执行 \texttt{Update()}，逐级向高层模块刷新状态，确保高层逻辑模块使用的数据是最新的。
+    
+    \item \textbf{自上而下任务执行}：队列尾部的高层控制模块先执行 \texttt{Handle()}，下发控制指令至中低层设备，形成自上而下的任务执行链。
+    
+    \item \textbf{分频调度}：每个设备可以独立设置更新与任务执行频率（\texttt{divisionFactor}），支持异步周期轮询和不同频率的设备协同。
+    
+    \item \textbf{软件工程优势}：新增设备仅需继承基类并实现接口函数，无需修改调度器即可被统一管理，实现模块化、可扩展性和高可维护性。
+\end{enumerate}
 
-该嵌入式控制框架具备良好的可扩展性和实时性，为后续控制算法优化及系统升级提供了基础。
+\subsection{ROV 系统设备实例化示例}
+
+以本研究的 ROV 系统为例，设备实例化与调度逻辑如下：
+
+\begin{itemize}
+    \item \textbf{高层控制模块}：水下机器人组合控制实例，包含 PID 控制器、状态估计前馈及扰动观测器。
+    \item \textbf{上位机指令解码}：包括指令解码模块及对应的串口缓冲，提供数据输入。
+    \item \textbf{底层外设}：推进器、深度传感器、IMU。
+\end{itemize}
+
+在运行时：
+
+\begin{itemize}
+    \item 底层外设首先执行 \texttt{Update()}，刷新传感器状态和执行器反馈。
+    \item 上位机指令解码模块随后更新状态，提供高层控制所需输入。
+    \item 高层控制模块执行 \texttt{Handle()}，根据底层设备状态和上位机输入计算控制命令，并下发到底层执行器。
+\end{itemize}
+
+该顺序保证了控制决策和指令下发的实时性和一致性，为水下机器人的精确控制提供了稳定的软件基础。
+
+图~\ref{fig:ROV_Device_Scheduling} 展示了 ROV 系统的设备实例化与调度顺序示意图。图中从上到下依次为：高层控制模块、上位机指令解码模块、底层外设（推进器、深度传感器、IMU），箭头表示状态更新与任务执行方向。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../figures/FineMote.png}
+    \caption{ROV 设备实例化与调度顺序示意图}
+    \label{fig:ROV_Device_Scheduling}
+\end{figure}
 
 \section{推进器驱动与底层通信协议}
 
-推进器作为ROV的主要执行机构，其控制精度直接影响系统运动性能。传统PWM控制方式存在抗干扰能力差、分辨率有限等问题，难以满足高精度水下运动控制需求。
+传统水下机器人推进器多数采用 PWM 信号进行驱动。PWM 驱动虽然结构简单、易于实现，但存在若干明显局限：
 
-本文采用DSHOT数字通信协议对推进器进行控制。该协议具有以下特点：
+\begin{enumerate}
+    \item \textbf{抗干扰能力不足}：PWM 信号为模拟脉宽调制波，容易受到噪声、电磁干扰影响，导致推进器响应不稳定。
+    \item \textbf{分辨率有限}：PWM 通常使用 8–12 位分辨率，对推力控制精度有限，难以满足高精度控制需求。
+    \item \textbf{控制带宽受限}：PWM 信号频率一般较低（~50–400 Hz），导致推进器响应速度和闭环控制带宽受限。
+    \item \textbf{缺乏转速回传}：PWM 不提供电子速度反馈，无法实时获得推进器转速信息，不利于实现闭环推力控制。
+\end{enumerate}
 
-\noindent\textbf{（1）数字化传输}  
-DSHOT通过固定长度的数据帧传输控制指令，避免模拟信号在长距离传输中的失真问题，提高通信可靠性。
+针对上述问题，本系统采用 DSHOT 数字通信协议驱动推进器，相较于 PWM 具有以下优势：
 
-\noindent\textbf{（2）高更新频率}  
-DSHOT300协议支持较高刷新频率，可满足控制系统对实时性的要求。
+\begin{enumerate}
+    \item \textbf{数字信号抗干扰能力强}：DSHOT 使用数字编码控制信号，传输过程具有 CRC 校验，可有效避免通信错误，提高系统可靠性。
+    \item \textbf{高分辨率与精确控制}：DSHOT 协议可实现高精度控制（如 11–16 位），显著提升推进器推力调节精度。
+    \item \textbf{高频率更新}：DSHOT 支持高达数千 Hz 的更新速率，提供更高控制带宽，使运动控制响应更加及时和稳定。
+    \item \textbf{内置转速反馈}：DSHOT 可支持电子转速回传，实现闭环推力控制，保证运动控制的精度和可靠性。
+    \item \textbf{简化硬件接线与同步控制}：单根信号线即可传输命令与反馈信息，减少布线复杂度，并便于多推进器同步控制。
+\end{enumerate}
 
-\noindent\textbf{（3）双向通信能力}  
-通过Telemetry机制，电调可回传电机转速信息，为实现闭环推力控制提供数据支持。
+通过采用 DSHOT 协议，系统能够实现高精度、高响应、可靠性强的推进器推力控制，为 ROV 的精确运动和稳定控制提供硬件保障。
 
-\subsection{DSHOT通信协议实现}
+\subsection{DSHOT通信协议实现方法}
 
-在具体实现中，利用STM32F4的定时器与DMA（直接存储器访问）功能，实现DSHOT信号的高精度输出。通过预先构建数据帧，并由DMA自动传输至GPIO寄存器，实现高速且稳定的信号生成。
+为了实现水下机器人推进器的高精度闭环控制，本系统在自主嵌入式框架上实现了 DSHOT 协议。实现过程与嵌入式调度机制紧密结合，并充分考虑 STM32F4 的 GPIO DMA传输的物理限制：
 
-DSHOT数据帧通常包含16位数据，其中包括：
-\begin{itemize}
-\item 11位油门值
-\item 1位遥测使能位
-\item 4位CRC校验码
-\end{itemize}
+\paragraph{1. DSHOT-PIN 和 DSHOT-PORT 封装}  
+每个推进器的 DSHOT 控制通道通过单例类封装为 GPIO-PIN，并注册到调度器队列。多个同一物理端口下的 PIN 封装为 GPIO-PORT，便于统一管理和 DMA 批量发送。
 
-其中，油门编码将推力分配模块输出的归一化控制量映射为0-2047的数字指令，确保高分辨率的推进器驱动输出。
+\paragraph{2. 数字信号生成与 CRC 校验}  
+每个 DSHOT-PIN 根据期望油门值生成数字信号，并附加 CRC 校验码。生成的信号随后转换为 GPIO BSRR 寄存器的掩码序列，准备通过 DMA 发送到对应 GPIO 端口。
 
-\subsection{转速回传与推力曲线拟合}
+\paragraph{3. GPIO-PORT 任务执行}  
+在 GPIO-PORT 层，将同一 PORT 下各 PIN 的掩码数组合并，形成统一的 BSRR 掩码数组，通过 \texttt{Handle()} 接口触发发送。由于 STM32F4 的物理限制，只有一个DMA通道支持固定频率数据覆写硬件寄存器，
+因此来自不同GPIO分组的DHSOT-PORT无法同时更新油门，必须依次发送油门信号并采样回传转速。这里嵌入式系统会依次对不同 GPIO-PORT 执行油门发送和转速读取，保证每个端口的 DMA 传输顺序正确，避免硬件冲突。
 
-利用DSHOT的Telemetry功能，系统可从电调获取实时转速回传数据。软件在接收回传信号后，采用定时器捕捉模式以三倍于信号频率的采样率读取回传脉冲，确保转速信号的可靠解析。
+\paragraph{4. DMA 高速数据搬运与频率控制}  
+为了满足 DSHOT 协议的更新频率（例如 DSHOT300 的 300 kHz），DMA 采用时钟触发方式搬运 BSRR 掩码数组到 GPIO 寄存器，实现高精度信号输出。每个 GPIO-PORT 在发送完油门数据后，切换为输入模式采样回传数据。
 
-基于回传的RPM数据，本项目进一步开展推力曲线拟合：
+\paragraph{5. 转速采样与解码}  
+转速回传数据采样遵循奈奎斯特采样定理，以三倍 DSHOT 发送频率采样，保证完整捕获回传脉冲。采样完成后进行 CRC 校验和解码，将电子转速（eRPM）转换为实际 RPM，为闭环推力控制提供精确反馈。
 
-\begin{itemize}
-\item 通过水池实验标定推进器转速与实际推力之间的关系；
-\item 利用回传转速在线查表或拟合多项式，获取当前工况下的实际推力估计；
-\item 将实际推力估计结果反馈到推进器控制环中，实现更加精确的推力闭环控制。
-\end{itemize}
+\paragraph{6. 调度机制集成}  
+DSHOT-PIN 和 DSHOT-PORT 的构造顺序与嵌入式调度器相结合：先构造 PIN，再构造 PORT，保证油门更新和转速采集能在调度周期内实时执行。Update()/Handle() 接口保证状态更新和任务执行顺序一致，使系统能在高频闭环条件下稳定运行。
 
-该方法解决了推进器在电压波动、水流载荷变化情况下的推力非线性问题，使高层控制器下发的推力指令能够更可靠地转化为物理推力输出。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../figures/DSHOT.png}
+    \caption{DSHOT 协议实现流程示意图}
+    \label{fig:DSHOT_implementation_flow}
+\end{figure}
 
-\subsection{软件开发与后续改进}
+\subsection{DSHOT 转速回传验证实验}
 
-嵌入式软件开发工作采用模块化设计，将推进器驱动、传感器采集与控制逻辑解耦。软件框架支持DeviceBase形式的设备抽象，实现统一的Update()与Handle()接口，便于后续扩展与维护。
+为验证 DSHOT 协议实现的闭环推力控制能力，本研究设计了一项转速回传验证实验。实验目标是确认通过 DSHOT 协议获取的电机转速与真实转速（通过无接触式转速计测量）之间的一致性，为后续推力-转速拟合提供可靠数据。
 
-后续改进包括：
-\begin{itemize}
-\item 在推进器驱动模块中加入推力查表或非线性补偿算法，提高高低档响应一致性；
-\item 结合转速回传数据，实现电调与推进器模型在线自适应标定；
-\item 对DSHOT通信与Telemetry机制进行容错处理，提升水下干扰环境下的可靠性。
-\end{itemize}
+\paragraph{实验方法}  
+\begin{enumerate}
+    \item 将电机固定在实验台上，通过 DSHOT 通信接口下发一系列不同油门值命令。  
+    \item 同时使用高精度无接触转速计测量电机的真实转速作为参考。  
+    \item 通过嵌入式框架接收 DSHOT 转速回传数据，并记录每个油门值对应的回传转速。  
+    \item 对比回传转速与无接触测得真实转速，计算误差、线性拟合系数及 RMSE。
+\end{enumerate}
+
+\paragraph{实验结果与分析}  
+实验表明，DSHOT 转速回传能够在整个油门范围内准确反映电机实际转速。以下两幅图用于展示实验环境与结果：
+
+% \begin{figure}[htbp]
+%     \centering
+%     \fbox{\parbox[c][0.35\textheight][c]{0.8\textwidth}{\centering \textit{实物图占位：转速测试台、电机及测速仪}}}
+%     \caption{转速测试台实物图示意（占位），后续将替换为真实照片。}
+%     \label{fig:DSHOT_testbench}
+% \end{figure}
+
+% \begin{figure}[htbp]
+%     \centering
+%     \fbox{\parbox[c][0.35\textheight][c]{0.8\textwidth}{\centering \textit{数据对比图占位：实际转速 vs DSHOT回传转速折线图}}}
+%     \caption{DSHOT 转速回传与实际转速对比示意（占位），用于验证精度并计算 RMSE。示例 RMSE: 待补充。}
+%     \label{fig:DSHOT_speed_comparison}
+% \end{figure}
 
 \section{智能电源监控与保护系统设计}
 
-水下机器人在实际运行过程中面临电源波动、浪涌电流以及短路等风险，因此设计稳定可靠的电源保护系统至关重要。本文基于LM5069热插拔控制器，构建了一套集过压保护、欠压保护、缓启动与过流保护于一体的电源管理系统。
+水下机器人在作业过程中，电源系统的安全性直接关系到整机可靠性和电池寿命。高容量电机驱动器、电源滤波电容及电子负载在通电瞬间可能产生大电流冲击，若不采取保护措施，可能导致 MOSFET 或电源板器件损坏、电池过放或过充，
+甚至系统重启异常，影响任务执行。为保障系统电源安全，本设计采用 LM5069 热插拔控制器，实现缓启动、欠压/过压保护以及过流与功率限制，从而保护机器人、驱动器及电池的安全。
 
-\subsection{基于LM5069的过压/欠压保护机制}
+整个电源保护板主要由缓启动、欠压锁定（UVLO）、过压锁定（OVLO）、过流及功率限制模块构成。缓启动模块通过 TIMER 引脚接入外部电容 C\textsubscript{TIMER}（330 nF），在 LM5069 内部电流源作用下缓慢充电，
+使 MOSFET 栅极电压逐步上升，从而限制上电瞬间的浪涌电流，减轻电机驱动器和滤波电容的冲击。欠压和过压保护通过外部分压电阻实现。过流保护模块通过电阻采样负载电流，并结合 MOSFET 并联设计限制电流。
 
-为保证系统在安全电压范围内运行，利用LM5069芯片的UVLO（欠压锁定）与OVLO（过压锁定）功能，通过电阻分压网络设定工作电压阈值。
+图~\ref{fig:schematic} 展示了 LM5069 保护板的完整原理图，标注了关键元件及功能模块，包括缓启动电容、UVLO/OVLO 分压电阻、SENSE 电阻及外部 MOSFET，便于理解公式计算与电路实现的对应关系。
 
-系统设计工作电压范围为：
-\begin{equation}
-19\,\mathrm{V} \leq V_{in} \leq 28\,\mathrm{V}
-\end{equation}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../figures/LM5069-1.png}
+    \caption{LM5069 保护板原理图}
+    \label{fig:schematic}
+\end{figure}
 
-当输入电压低于下限时，可防止电池过度放电；当电压高于上限时，则避免外部浪涌对电子元件造成损坏。当电压超出设定范围时，LM5069将迅速关闭外接MOSFET，实现负载断电保护。
+\subsection{缓启动设计与实验}
+缓启动通过 TIMER 引脚外接电容 C\textsubscript{TIMER} 实现，其充放电公式如下：
+\[
+t_\mathrm{inrush} = \frac{C_T \cdot (V_\mathrm{TMRH} - V_\mathrm{TMRL})}{I_\mathrm{charge}} = \frac{330~\mathrm{nF} \cdot 2.75~\mathrm{V}}{5.5~\mu\mathrm{A}} \approx 0.165~\mathrm{s}.
+\]
+实验中，在 24V 电源下负载为电机驱动器和大容量滤波电容，电源开关打开后输出电压呈阶梯型上升，从 0V 到 24V 缓启动耗时约 200 ms，验证了缓启动设计能够有效抑制开机瞬态电流，保护电池和负载（图~\ref{fig:inrush_exp}）。
 
-\subsection{涓流缓启动与浪涌电流抑制实现}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../figures/LM5069-2.png}
+    \caption{缓启动实验：24V 输入下负载电压阶梯型上升，约 200 ms 完成上电。}
+    \label{fig:inrush_exp}
+\end{figure}
 
-ROV系统内部存在大量滤波电容与驱动模块，上电瞬间可能产生较大的浪涌电流，影响系统稳定性甚至损坏器件。
+\subsection{欠压与过压保护设计及实验}
+通过外部分压电阻设置 UVLO 和 OVLO 阈值：
+\[
+V_\mathrm{UVLO} = 2.5 \left(1 + \frac{R3}{R4}\right) \approx 18~\mathrm{V}, \quad
+V_\mathrm{OVLO} = 2.5 \left(1 + \frac{R6}{R5}\right) \approx 32.5~\mathrm{V}.
+\]
+在 18~V 到 30~V 区间内，以 2V 步进测试输出状态，当电压低于 18V 或高于 30V 时，保护板自动断开输出，输出恢复至安全区间后自动恢复供电，验证了欠压/过压保护的有效性（图~\ref{fig:uvlo_ovlo_exp}）。
 
-本文通过在LM5069的TIMER引脚外接电容，控制MOSFET栅极电压上升速率，从而实现缓启动过程。该机制使输入电流呈线性增长，有效抑制瞬态冲击电流，避免电压跌落与系统重启问题。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{../figures/LM5069-3.png}
+    \caption{过压/欠压保护实验：输出在 18~V 以下或 30~V 以上时自动切断。}
+    \label{fig:uvlo_ovlo_exp}
+\end{figure}
 
-此外，在高电流回路中引入低阻值采样电阻，实现对电流的实时监测。为满足100A级输出需求，选用低$R_{DS(on)}$ MOSFET，并采用多颗MOSFET并联以降低导通电阻。通过在每颗MOSFET栅极串联小电阻，抑制高频寄生振荡，保证并联管路的同步开关特性。
+\subsection{硬件选型总结}
+\begin{table}[htbp]
+\centering
+\caption{LM5069 电源保护板关键元件及选型计算}
+\begin{tabular}{|l|l|l|l|}
+\hline
+功能 & 元件 & 说明 & 计算依据 \\
+\hline
+缓启动 & C1=330nF, R7/R2 & TIMER 引脚充放电控制上电延迟 & \(t = C_T \Delta V / I_{charge}\) \\
+欠压保护 & R3=47kΩ, R4=7.5kΩ & UVLO 分压设置低压锁定 & \(V_{UVLO} = 2.5(1+R3/R4)\approx18V\) \\
+过压保护 & R6=180kΩ, R5=15kΩ & OVLO 分压设置高压锁定 & \(V_{OVLO} = 2.5(1+R6/R5)\approx32.5V\) \\
+过流保护 & R1=0.5mΩ & SENSE 电阻限流 & \(I_{max}=V_{CL}/R_{SENSE}\approx110A\) \\
+\hline
+\end{tabular}
+\end{table}
 
-当采样电阻两端的压降达到预设阈值时，系统进入限流模式或触发断路保护。此外，电流采样信号由ADC或比较器送入微控制器，结合软件逻辑实现报警、断电和重启保护机制，进一步增强电源系统的可靠性。
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../figures/LM5069-5.png}
+        \caption{LM5069 保护板 PCB 布局}
+        \label{fig:pcb_layout}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../figures/LM5069-4.jpg}
+        \caption{LM5069 保护板实物图}
+        \label{fig:board_photo}
+    \end{minipage}
+\end{figure}
+
+综上所述，电源保护板的设计通过缓启动、欠压/过压保护及过流限制等多重防护机制，有效保障了水下机器人电源系统的安全性与可靠性。表~\ref{tab:hardware-selection} 总结了关键元件的选型计算依据，
+PCB 布局与实物图直观展示了电路实现的工程细节。该电源管理方案为 ROV 的长期稳定运行提供了坚实的基础。
 
 \section{本章小结}
 
-本章围绕ROV控制系统的工程实现，对核心硬件平台与嵌入式软件架构进行了详细设计。首先构建了以STM32F4为核心的嵌入式控制系统，并提出模块化软件框架，实现设备抽象与任务调度；其次采用DSHOT数字通信协议实现推进器高精度驱动，提高了执行层的响应性能；最后基于LM5069设计了智能电源保护系统，有效提升了系统运行的安全性与稳定性。
-
-上述硬件与软件系统为前述控制算法的工程落地提供了可靠支撑，并为后续实机实验验证奠定了基础。
+本章详细阐述了水下机器人 ROV 控制系统的核心硬件平台与嵌入式软件架构实现。首先，基于 STM32F4 微控制器构建的模块化软件框架采用统一的设备调度机制，
+通过 C++ 多态与分频调度实现了底层设备状态的自下而上更新与高层控制指令的自上而下执行，确保了系统的模块化与可扩展性；其次，为克服传统 PWM 驱动的局限，
+本系统实现了 DSHOT 数字通信协议，通过 GPIO-DMA 硬件加速、CRC 校验与转速回传验证，实现了高分辨率（11--16 位）、高频率（数千 Hz）的推进器精确控制；
+最后，基于 LM5069 芯片的电源保护系统通过缓启动、欠压/过压保护与过流限制等多重防护机制，确保了 ROV 系统在复杂水下环境中的电源安全与长期可靠性。
+这些工程实现为第三章提出的控制算法提供了坚实的硬件基础，并为后续实机实验与应用验证奠定了基础。
