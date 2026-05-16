@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//usr/**)",
+      "Bash(perl -v)",
+      "Bash(perl tmp/count_cn.pl)"
+    ]
+  }
+}

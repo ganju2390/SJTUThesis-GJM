@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.11)  16 MAY 2026 16:55
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.11)  16 MAY 2026 17:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2108,8 +2108,8 @@ Package fontspec Info:
 File: figures/../figures/FineMote.png Graphic file (type bmp)
 <figures/../figures/FineMote.png>
  [24] [25]
-Overfull \hbox (14.93387pt too wide) in paragraph at lines 97--98
-\TU/TeXGyreTermesX(0)/b/n/12.045 4. DMA \TU/SimSun(0)/b/n/12.045 高 速 数 据 搬 运 与 频 率 控 制[] \TU/SimSun(0)/m/n/12.045 为 了 满 足 \TU/TeXGyreTermesX(0)/m/n/12.045 DSHOT \TU/SimSun(0)/m/n/12.045 协 议 的 更 新 频 率  |（例 如 \TU/TeXGyreTermesX(0)/m/n/12.045 DSHOT300
+Overfull \hbox (22.95584pt too wide) in paragraph at lines 97--98
+\TU/TeXGyreTermesX(0)/b/n/12.045 (4). DMA \TU/SimSun(0)/b/n/12.045 高 速 数 据 搬 运 与 频 率 控 制[] \TU/SimSun(0)/m/n/12.045 为 了 满 足 \TU/TeXGyreTermesX(0)/m/n/12.045 DSHOT \TU/SimSun(0)/m/n/12.045 协 议 的 更 新 频 率  |（例 如 \TU/TeXGyreTermesX(0)/m/n/12.045 DSHOT300
  []
 
 File: figures/../figures/DSHOT.png Graphic file (type bmp)
@@ -2151,26 +2151,27 @@ File: figures/../figures/starccm_velocity_contour.png Graphic file (type bmp)
  [34] [35]
 File: figures/../figures/thruster_frame.JPEG Graphic file (type bmp)
 <figures/../figures/thruster_frame.JPEG>
- [36] [37]
+ [36]
 File: figures/../figures/simulink_parameter_setting.png Graphic file (type bmp)
 <figures/../figures/simulink_parameter_setting.png>
 File: figures/../figures/simulink_position_tracking.png Graphic file (type bmp)
 <figures/../figures/simulink_position_tracking.png>
- [38]
+ [37]
 File: figures/../figures/simulink_attitude_tracking.png Graphic file (type bmp)
 <figures/../figures/simulink_attitude_tracking.png>
- [39]
+ [38]
 File: figures/../figures/real-test-depth.png Graphic file (type bmp)
 <figures/../figures/real-test-depth.png>
+ [39]
 File: figures/../figures/real-test-att.png Graphic file (type bmp)
 <figures/../figures/real-test-att.png>
- [40]) (./contents/summary.tex [41] [42]
+ [40]) (./contents/summary.tex [41]
 第 6 章
-[43
+[42
 
-]) [44] [45
+]) [43] [44
 
-] [46] (./contents/acknowledgements.tex) (./contents/digest.tex) [47
+] [45] (./contents/acknowledgements.tex) (./contents/digest.tex) [46
 
 
 
@@ -2218,18 +2219,18 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EB7E54CA5E9F4FD2E860B38BD74EB727;12331.
+(rerunfilecheck)             Checksum: 95F29D6EFF7A392AF2211D2198BDBB5B;12164.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60554 strings out of 470139
- 1423493 string characters out of 5477717
- 2409419 words of memory out of 5000000
- 88207 multiletter control sequences out of 15000+600000
+ 60542 strings out of 470139
+ 1422727 string characters out of 5477717
+ 2409372 words of memory out of 5000000
+ 88195 multiletter control sequences out of 15000+600000
  700390 words of font info for 243 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  107i,13n,124p,1798b,7491s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (62 pages).
+Output written on main.pdf (61 pages).

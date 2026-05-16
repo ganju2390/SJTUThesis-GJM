@@ -58,12 +58,12 @@
 \contentsline {subsection}{\numberline {4.1.2}ROV 系统设备实例化示例}{23}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}推进器驱动与底层通信协议}{24}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}DSHOT通信协议实现方法}{25}{subsection.4.2.1}%
-\contentsline {paragraph}{1. DSHOT-PIN 和 DSHOT-PORT 封装}{25}{paragraph*.14}%
-\contentsline {paragraph}{2. 数字信号生成与 CRC 校验}{25}{paragraph*.15}%
-\contentsline {paragraph}{3. GPIO-PORT 任务执行}{25}{paragraph*.16}%
-\contentsline {paragraph}{4. DMA 高速数据搬运与频率控制}{26}{paragraph*.17}%
-\contentsline {paragraph}{5. 转速采样与解码}{26}{paragraph*.18}%
-\contentsline {paragraph}{6. 调度机制集成}{26}{paragraph*.19}%
+\contentsline {paragraph}{(1). DSHOT-PIN 和 DSHOT-PORT 封装}{25}{paragraph*.14}%
+\contentsline {paragraph}{(2). 数字信号生成与 CRC 校验}{25}{paragraph*.15}%
+\contentsline {paragraph}{(3). GPIO-PORT 任务执行}{25}{paragraph*.16}%
+\contentsline {paragraph}{(4). DMA 高速数据搬运与频率控制}{26}{paragraph*.17}%
+\contentsline {paragraph}{(5). 转速采样与解码}{26}{paragraph*.18}%
+\contentsline {paragraph}{(6). 调度机制集成}{26}{paragraph*.19}%
 \contentsline {subsection}{\numberline {4.2.2}DSHOT 转速回传验证实验}{26}{subsection.4.2.2}%
 \contentsline {paragraph}{实验方法}{26}{paragraph*.21}%
 \contentsline {paragraph}{实验结果与分析}{27}{paragraph*.22}%
@@ -82,18 +82,17 @@
 \contentsline {section}{\numberline {5.2}推进器推力拟合}{35}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}推力测试台架搭建}{36}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}推力曲线拟合方法}{37}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}推力控制准确性验证}{37}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}基于Simulink的控制算法仿真验证}{38}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}仿真模型建立}{38}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.3}基于Simulink的控制算法仿真验证}{37}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}仿真模型建立}{37}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}位置与姿态跟踪仿真结果}{38}{subsection.5.3.2}%
 \contentsline {section}{\numberline {5.4}静水实机运动控制实验验证}{39}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}实验环境与系统配置}{40}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}位置跟踪与姿态跟踪实验结果}{40}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}本章小结}{41}{section.5.5}%
-\contentsline {chapter}{\numberline {第 6 章}总结与展望}{43}{chapter.6}%
-\contentsline {section}{\numberline {6.1}全文总结}{43}{section.6.1}%
-\contentsline {section}{\numberline {6.2}研究工作展望}{44}{section.6.2}%
-\contentsline {chapter}{参考文献}{45}{chapter*.38}%
-\contentsline {chapter}{致\quad 谢}{47}{section*.39}%
+\contentsline {subsection}{\numberline {5.4.1}实验环境与系统配置}{39}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}位置跟踪与姿态跟踪实验结果}{39}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}本章小结}{40}{section.5.5}%
+\contentsline {chapter}{\numberline {第 6 章}总结与展望}{42}{chapter.6}%
+\contentsline {section}{\numberline {6.1}全文总结}{42}{section.6.1}%
+\contentsline {section}{\numberline {6.2}研究工作展望}{43}{section.6.2}%
+\contentsline {chapter}{参考文献}{44}{chapter*.38}%
+\contentsline {chapter}{致\quad 谢}{46}{section*.39}%
 \contentsfinish 
 \contentsfinish 
