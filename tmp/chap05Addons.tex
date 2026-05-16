@@ -1,0 +1,65 @@
+
+\section{基于Simulink的控制算法仿真验证}
+
+为了进一步验证所设计控制算法的有效性，在MATLAB/Simulink环境中搭建ROV六自由度运动控制仿真模型。仿真模型参考von Benzon等提出的BlueROV2开源Simulink基准仿真平台的模块化建模思想\cite{von2022open}，将第五章建立的简化动力学模型、STAR-CCM+求得的附加质量与水动力阻尼参数，以及SQRT-PID双环姿态控制、速度闭环控制、模型前馈补偿和推力分配算法共同集成到Simulink仿真框架中。
+
+\subsection{仿真模型建立}
+仿真系统整体由参考输入模块、控制器模块、动力学模型模块、推力分配模块和状态反馈模块组成。控制器部分包括SQRT-PID双环姿态控制和速度闭环平移控制，同时在反馈控制基础上引入基于物理模型的前馈补偿项。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{simulink_parameter_setting.png}
+    \caption{MATLAB/Simulink控制算法仿真参数设置}
+    \label{fig:simulink_parameter_setting}
+\end{figure}
+
+\subsection{位置与姿态跟踪仿真结果}
+仿真中给定ROV初始位置和初始姿态，设置期望轨迹或期望目标点，分别观察三个平移方向和三个姿态角方向上的响应曲线。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{simulink_position_tracking.png}
+    \caption{ROV位置跟踪仿真结果}
+    \label{fig:simulink_position_tracking}
+\end{figure}
+
+位置跟踪结果表明，ROV实际位置能够较快向参考输入收敛，并在短暂调整后保持稳定跟踪，整体不存在明显发散或持续振荡现象，说明所建立动力学模型与控制器之间具有较好的闭环匹配性。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{simulink_attitude_tracking.png}
+    \caption{ROV姿态跟踪仿真结果}
+    \label{fig:simulink_attitude_tracking}
+\end{figure}
+
+姿态跟踪结果表明，SQRT-PID双环控制结构在大误差阶段能够避免控制输出过大，在小误差阶段又能够保持较高的调节灵敏度，角速度内环进一步提高了系统的阻尼特性，使姿态角变化过程更加平滑。由于仿真模型中引入了由CFD方法获得的附加质量和水动力阻尼参数，系统响应能够在一定程度上反映水下机器人真实运动中的惯性滞后和流体阻尼特性。
+
+% ========== 综合实机试验（团队） ==========
+
+\section{静水实机运动控制实验验证}
+
+为进一步验证控制算法在真实水下机器人平台上的可行性，在静水环境下开展了ROV实机运动控制实验。与仿真环境相比，实机实验会受到推进器响应非线性、传感器噪声、通信延迟、结构装配误差以及电源电压波动等因素影响，因此能够更直接地反映控制算法在实际系统中的运行效果。
+
+\subsection{实验环境与系统配置}
+实机实验在静水环境中进行，实验前首先对机器人进行浮力配平、推进器方向检查、传感器零偏校准和通信链路测试。底层控制器负责推进器驱动、传感器数据采集和姿态解算（基于前述EKF融合引擎），上位机负责发送期望位置、期望姿态以及运动控制指令。
+
+\subsection{位置跟踪与姿态跟踪实验结果}
+位置跟踪实验结果表明，机器人在$x$、$y$和$z$方向上均能够实现较稳定的闭环控制。水平面内的位置变化主要由水平推进器组合产生控制力实现，深度方向则由垂向推进器与浮力重力平衡共同决定。图\ref{fig:real-test-depth}给出了静水实机实验中的深度追踪曲线。可以看到，机器人在接收到目标深度指令后能够迅速产生响应，实际深度曲线能够较快向期望深度收敛，并在到达目标附近后保持小幅波动。该结果说明垂向推进器、深度反馈和控制器之间具有较好的闭环匹配性，定深控制响应较快、稳态误差较小，能够满足浅水环境下悬停和近距离作业对深度稳定性的要求。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\textwidth]{real-test-depth.png}
+    \caption{静水实机实验深度追踪结果}
+    \label{fig:real-test-depth}
+\end{figure}
+
+姿态跟踪实验结果如图\ref{fig:real-test-att}所示。横滚角、俯仰角和偏航角均能够较好地跟随期望姿态变化，姿态响应整体平稳，没有出现明显发散或持续振荡现象。在姿态指令发生变化时，实际姿态能够在较短时间内完成过渡；进入稳态后，姿态曲线围绕期望值保持较小幅度波动，体现出较高的跟踪精度和较好的抗扰能力。该结果表明，SQRT-PID双环姿态控制结构能够在实机平台上保持良好的动态响应：外环根据姿态误差生成期望角速度，避免大姿态误差下控制量突变过大；内环根据角速度误差快速调节控制力矩，提高了系统的动态阻尼和姿态稳定性。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\textwidth]{real-test-att.png}
+    \caption{静水实机实验姿态追踪结果}
+    \label{fig:real-test-att}
+\end{figure}
+
+综合静水环境下的深度追踪和姿态追踪实验结果可知，基于双环姿态控制、速度闭环控制、动力学前馈补偿和推力分配的综合控制方案能够适用于本文研制的ROV平台。实机曲线表明系统具有较快响应速度、较高稳态精度和良好的运行稳定性，能够为后续水下巡检、定深悬停和机械臂近距离作业提供可靠的运动控制基础。

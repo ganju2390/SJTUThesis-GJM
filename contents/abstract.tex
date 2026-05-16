@@ -1,24 +1,13 @@
 % !TEX root = ../main.tex
 
 \begin{abstract}[zh]
-  中文摘要应该将学位论文的内容要点简短明了地表达出来，应该包含论文中的基本信息，
-  体现科研工作的核心思想。摘要内容应涉及本项科研工作的目的和意义、研究方法、研究
-  成果、结论及意义。注意突出学位论文中具有创新性的成果和新见解的部分。摘要中不宜
-  使用公式、化学结构式、图表和非公知公用的符号和术语，不标注引用文献编号。硕士学
-  位论文中文摘要字数为 500 字左右，博士学位论文中文摘要字数为 800 字左右。英文摘
-  要内容应与中文摘要内容一致。
+本文围绕浅水水域小型遥控水下机器人（ROV）的高精度运动控制问题，以"弱感知、弱算力"条件下的工程可实现性为导向，从动力学建模、控制算法设计、嵌入式软硬件开发到仿真与实机实验，进行了系统性研究。
 
-  摘要页的下方注明本文的关键词（4 \textasciitilde{} 6 个）。
+在动力学建模方面，基于Fossen六自由度非线性框架建立ROV完整动力学模型，通过中性浮力设计、重心浮心共线配置与对角化近似等策略得到简化名义模型，在保留主要动力学特性的同时降低实时计算开销。在控制算法方面，设计了SQRT-PID双环姿态控制器，外环利用平方根映射抑制大误差下的控制量突变并配合积分抗饱和策略保证稳态精度，内环通过角速度反馈增强系统阻尼；引入基于简化模型的动力学前馈补偿与扩展状态观测器（ESO），对未建模动态与外部扰动进行在线估计与补偿；针对六推进器过驱动布局，基于伪逆法实现最小能耗推力分配。在嵌入式实现方面，基于STM32F4平台构建了统一设备基类的模块化调度框架，通过"自下而上状态更新、自上而下任务执行"机制实现多外设多频率任务的协同运行；采用DSHOT数字通信协议替代传统PWM，实现推进器高频精确驱动与转速回传；设计了基于LM5069的电源保护板，具备缓启动、欠压/过压保护及过流限制功能。在参数获取与验证方面，利用Simcenter STAR-CCM+针对附加质量与阻尼系数分别设计稳态与瞬态仿真工况，求取了六自由度水动力参数矩阵；通过MATLAB/Simulink闭环仿真与静水实机实验验证了整体方案的有效性。
+
+结果表明，所提出的控制方案响应迅速、稳态精度高、运行稳定，能够为浅水环境下ROV的巡检、定深悬停与近距作业提供可靠的运动控制基础。
 \end{abstract}
 
 \begin{abstract}[en]
-  Shanghai Jiao Tong University (SJTU) is a key university in China. SJTU was
-  founded in 1896. It is one of the oldest universities in China. The University
-  has nurtured large numbers of outstanding figures include JIANG Zemin, DING
-  Guangen, QIAN Xuesen, Wu Wenjun, WANG An, etc.
-
-  SJTU has beautiful campuses, Bao Zhaolong Library, Various laboratories. It
-  has been actively involved in international academic exchange programs. It is
-  the center of CERNet in east China region, through computer networks, SJTU has
-  faster and closer connection with the world.
+A systematic study on high-precision motion control for a small remotely operated vehicle (ROV) in shallow waters is presented, emphasizing engineering feasibility under constrained sensing and computational resources. A six-degree-of-freedom dynamics model based on Fossen's framework is simplified through neutral buoyancy design, coincident center-of-gravity and center-of-buoyancy alignment, and diagonal approximation to reduce real-time computational cost. A dual-loop SQRT-PID attitude controller is designed: the outer loop applies square-root mapping to suppress excessive control effort under large errors with integral anti-windup, while the inner loop provides angular velocity damping. Model-based feedforward and an extended state observer (ESO) compensate for known dynamics and external disturbances online. A pseudo-inverse scheme handles thrust allocation for the over-actuated six-thruster layout. On the STM32F4 embedded platform, a modular scheduling framework based on a unified device base class coordinates multi-peripheral, multi-rate tasks. The DSHOT digital protocol replaces conventional PWM for high-frequency, high-precision thruster control with speed feedback, and an LM5069-based power protection board provides inrush limiting and over/under-voltage protection. Hydrodynamic parameters are obtained via separate steady-state and transient CFD simulations in Simcenter STAR-CCM+. MATLAB/Simulink simulations and still-water field experiments demonstrate that the proposed approach achieves fast response, high steady-state accuracy, and stable operation, providing a reliable motion control foundation for ROV inspection, station-keeping, and close-range intervention tasks in shallow-water environments.
 \end{abstract}

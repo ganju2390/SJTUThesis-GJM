@@ -46,145 +46,187 @@
 \abx@aux@segm{0}{0}{Hong2025Review}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}模型控制}{4}{subsection.1.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}基于学习的控制}{4}{subsection.1.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}小结}{5}{subsection.1.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}本文主要研究内容与目标}{5}{section.1.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces 本文研究内容与技术路线整体框架}}{5}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:PaperStructure}{{1.1}{5}{本文研究内容与技术路线整体框架}{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}论文结构安排}{6}{section.1.4}\protected@file@percent }
-\pp@pagectr{footnote}{2}{15}{7}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 2 章}ROV系统建模}{7}{chapter.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}六自由度动力学建模理论}{7}{section.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}坐标系建立与运动状态描述}{7}{subsection.2.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces ROV坐标系建立示意图（地球坐标系与体坐标系）}}{7}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:frame}{{2.1}{7}{ROV坐标系建立示意图（地球坐标系与体坐标系）}{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}完整动力学方程}{8}{subsection.2.1.2}\protected@file@percent }
-\newlabel{eq:fossen_model}{{2.4}{8}{完整动力学方程}{equation.2.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.1}惯性矩阵}{8}{subsubsection.2.1.2.1}\protected@file@percent }
-\newlabel{eq:skew_symmetric}{{2.6}{8}{惯性矩阵}{equation.2.6}{}}
-\newlabel{eq:M_RB_block}{{2.7}{8}{惯性矩阵}{equation.2.7}{}}
-\newlabel{eq:M_RB_full}{{2.8}{8}{惯性矩阵}{equation.2.8}{}}
-\newlabel{eq:M_A_full}{{2.9}{9}{惯性矩阵}{equation.2.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.2}科里奥利与向心力矩阵}{9}{subsubsection.2.1.2.2}\protected@file@percent }
-\newlabel{eq:C_RB}{{2.11}{9}{科里奥利与向心力矩阵}{equation.2.11}{}}
-\newlabel{eq:C_A}{{2.12}{9}{科里奥利与向心力矩阵}{equation.2.12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.3}水动力阻尼矩阵}{9}{subsubsection.2.1.2.3}\protected@file@percent }
-\newlabel{eq:D_full_diag}{{2.14}{10}{水动力阻尼矩阵}{equation.2.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.4}恢复力向量}{10}{subsubsection.2.1.2.4}\protected@file@percent }
-\newlabel{eq:g_full}{{2.15}{10}{恢复力向量}{equation.2.15}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}实际工况下的简化动力学模型}{10}{section.2.2}\protected@file@percent }
+\abx@aux@cite{0}{ardusub_autopilot_docs}
+\abx@aux@segm{0}{0}{ardusub_autopilot_docs}
+\abx@aux@cite{0}{ardupilot_pwm_esc_docs}
+\abx@aux@segm{0}{0}{ardupilot_pwm_esc_docs}
+\abx@aux@cite{0}{blueos_esc_docs}
+\abx@aux@segm{0}{0}{blueos_esc_docs}
+\abx@aux@cite{0}{px4_dshot_docs}
+\abx@aux@segm{0}{0}{px4_dshot_docs}
+\abx@aux@cite{0}{freertos_scheduler_docs}
+\abx@aux@segm{0}{0}{freertos_scheduler_docs}
+\abx@aux@cite{0}{xu2022ros2_realtime_executor}
+\abx@aux@segm{0}{0}{xu2022ros2_realtime_executor}
+\abx@aux@cite{0}{chaaban2023ros2_scheduling}
+\abx@aux@segm{0}{0}{chaaban2023ros2_scheduling}
+\abx@aux@cite{0}{wang2024microros_pods}
+\abx@aux@segm{0}{0}{wang2024microros_pods}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}控制硬件与嵌入式实现}{5}{subsection.1.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.5}小结}{5}{subsection.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}本文主要研究内容与目标}{6}{section.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces 本文研究内容与技术路线整体框架}}{6}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:PaperStructure}{{1.1}{6}{本文研究内容与技术路线整体框架}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}论文结构安排}{7}{section.1.4}\protected@file@percent }
+\pp@pagectr{footnote}{2}{16}{8}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 2 章}ROV系统建模}{8}{chapter.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}六自由度动力学建模理论}{8}{section.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}坐标系建立与运动状态描述}{8}{subsection.2.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces ROV坐标系建立示意图（地球坐标系与体坐标系）}}{8}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:frame}{{2.1}{8}{ROV坐标系建立示意图（地球坐标系与体坐标系）}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}完整动力学方程}{9}{subsection.2.1.2}\protected@file@percent }
+\newlabel{eq:fossen_model}{{2.4}{9}{完整动力学方程}{equation.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.1}惯性矩阵}{9}{subsubsection.2.1.2.1}\protected@file@percent }
+\newlabel{eq:skew_symmetric}{{2.6}{9}{惯性矩阵}{equation.2.6}{}}
+\newlabel{eq:M_RB_block}{{2.7}{9}{惯性矩阵}{equation.2.7}{}}
+\newlabel{eq:M_RB_full}{{2.8}{9}{惯性矩阵}{equation.2.8}{}}
+\newlabel{eq:M_A_full}{{2.9}{10}{惯性矩阵}{equation.2.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.2}科里奥利与向心力矩阵}{10}{subsubsection.2.1.2.2}\protected@file@percent }
+\newlabel{eq:C_RB}{{2.11}{10}{科里奥利与向心力矩阵}{equation.2.11}{}}
+\newlabel{eq:C_A}{{2.12}{10}{科里奥利与向心力矩阵}{equation.2.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.3}水动力阻尼矩阵}{10}{subsubsection.2.1.2.3}\protected@file@percent }
+\newlabel{eq:D_full_diag}{{2.14}{11}{水动力阻尼矩阵}{equation.2.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.4}恢复力向量}{11}{subsubsection.2.1.2.4}\protected@file@percent }
+\newlabel{eq:g_full}{{2.15}{11}{恢复力向量}{equation.2.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}实际工况下的简化动力学模型}{11}{section.2.2}\protected@file@percent }
 \abx@aux@cite{0}{fossen2011handbook}
 \abx@aux@segm{0}{0}{fossen2011handbook}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}惯性矩阵的化简与对角化处理}{11}{subsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.1}刚体惯性矩阵的化简}{11}{subsubsection.2.2.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.2}附加质量矩阵的化简}{11}{subsubsection.2.2.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.3}总惯性矩阵的最终形式}{12}{subsubsection.2.2.1.3}\protected@file@percent }
-\newlabel{eq:M_simplified}{{2.21}{12}{总惯性矩阵的最终形式}{equation.2.21}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}科里奥利与向心力矩阵的简化处理}{12}{subsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}阻尼矩阵的线性化与对角化处理}{13}{subsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.1}线性化处理}{13}{subsubsection.2.2.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.2}对角化处理}{13}{subsubsection.2.2.3.2}\protected@file@percent }
-\newlabel{eq:D_simplified}{{2.25}{13}{对角化处理}{equation.2.25}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}恢复力向量的物理约束化简}{13}{subsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.1}中性浮力设计}{13}{subsubsection.2.2.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.2}重心浮心共线设计}{14}{subsubsection.2.2.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.3}深重心布局}{14}{subsubsection.2.2.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.4}简化后的恢复力向量}{14}{subsubsection.2.2.4.4}\protected@file@percent }
-\newlabel{eq:g_simplified}{{2.29}{14}{简化后的恢复力向量}{equation.2.29}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}简化名义模型汇总}{14}{subsection.2.2.5}\protected@file@percent }
-\newlabel{eq:simplified_model}{{2.30}{14}{简化名义模型汇总}{equation.2.30}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}本章小结}{15}{section.2.3}\protected@file@percent }
-\pp@pagectr{footnote}{3}{24}{16}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 3 章}高精度运动控制算法设计}{16}{chapter.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}控制架构设计原则}{16}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}姿态控制：SQRT-PID双环结构设计}{16}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}平方根位置环与抗饱和策略}{17}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}角速度PID反馈环}{17}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}平移运动速度控制策略}{17}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}基于物理模型的动力学前馈补偿}{18}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}基于简化模型的前馈}{18}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基于ESO的扰动前馈}{18}{subsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}总前馈力矩}{19}{subsection.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}过驱动系统的推力分配逻辑}{19}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}推力分配矩阵的推导}{19}{subsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}电机布局与分布图}{19}{subsection.3.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces ROV推进器电机分布图}}{20}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:thruster-layout}{{3.1}{20}{ROV推进器电机分布图}{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}推力分配矩阵的具体表达}{20}{subsection.3.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}基于伪逆的最小能耗解算}{21}{subsection.3.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}本章小结}{21}{section.3.6}\protected@file@percent }
-\pp@pagectr{footnote}{4}{30}{22}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 4 章}核心硬件平台研发与嵌入式软件开发}{22}{chapter.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}嵌入式软件框架设计}{22}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}统一设备调度机制}{22}{subsection.4.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}ROV 系统设备实例化示例}{22}{subsection.4.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces ROV 设备实例化与调度顺序示意图}}{23}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:ROV_Device_Scheduling}{{4.1}{23}{ROV 设备实例化与调度顺序示意图}{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}推进器驱动与底层通信协议}{23}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}DSHOT通信协议实现方法}{24}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{1. DSHOT-PIN 和 DSHOT-PORT 封装}{24}{paragraph*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{2. 数字信号生成与 CRC 校验}{24}{paragraph*.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{3. GPIO-PORT 任务执行}{24}{paragraph*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{4. DMA 高速数据搬运与频率控制}{25}{paragraph*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{5. 转速采样与解码}{25}{paragraph*.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{6. 调度机制集成}{25}{paragraph*.19}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces DSHOT 协议实现流程示意图}}{25}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:DSHOT_implementation_flow}{{4.2}{25}{DSHOT 协议实现流程示意图}{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}DSHOT 转速回传验证实验}{25}{subsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验方法}{25}{paragraph*.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验结果与分析}{26}{paragraph*.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}智能电源监控与保护系统设计}{26}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}缓启动设计与实验}{26}{subsection.4.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces LM5069 保护板原理图}}{27}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:schematic}{{4.3}{27}{LM5069 保护板原理图}{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 缓启动实验：24V 输入下负载电压阶梯型上升，约 200 ms 完成上电。}}{27}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:inrush_exp}{{4.4}{27}{缓启动实验：24V 输入下负载电压阶梯型上升，约 200 ms 完成上电。}{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}欠压与过压保护设计及实验}{27}{subsection.4.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}硬件选型总结}{27}{subsection.4.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 过压/欠压保护实验：输出在 18~V 以下或 30~V 以上时自动切断。}}{28}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:uvlo_ovlo_exp}{{4.5}{28}{过压/欠压保护实验：输出在 18~V 以下或 30~V 以上时自动切断。}{figure.caption.25}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces LM5069 电源保护板关键元件及选型计算}}{28}{table.caption.26}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces LM5069 保护板 PCB 布局}}{28}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:pcb_layout}{{4.6}{28}{LM5069 保护板 PCB 布局}{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces LM5069 保护板实物图}}{28}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:board_photo}{{4.7}{28}{LM5069 保护板实物图}{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}本章小结}{29}{section.4.4}\protected@file@percent }
-\pp@pagectr{footnote}{5}{38}{30}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 5 章}控制系统仿真验证与分析}{30}{chapter.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}基于Simcenter STAR-CCM+的动力学参数求取}{30}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}流体域建立与网格划分}{30}{subsection.5.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Fusion中CFD前处理与表面网格细分效果}}{31}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:cfd_preprocess_fusion}{{5.1}{31}{Fusion中CFD前处理与表面网格细分效果}{figure.caption.28}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces STAR-CCM+网格划分主要参数设置}}{31}{table.caption.29}\protected@file@percent }
-\newlabel{tab:starccm_mesh_parameters}{{5.1}{31}{STAR-CCM+网格划分主要参数设置}{table.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces STAR-CCM+中水下机器人本体与流体域网格划分结果}}{32}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:starccm_body_and_domain_mesh}{{5.2}{32}{STAR-CCM+中水下机器人本体与流体域网格划分结果}{figure.caption.30}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}仿真工况设置}{32}{subsection.5.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 典型工况下水下机器人周围速度云图}}{33}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:starccm_velocity_contour}{{5.3}{33}{典型工况下水下机器人周围速度云图}{figure.caption.31}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}水动力参数结果}{33}{subsection.5.1.3}\protected@file@percent }
-\newlabel{eq:added_mass_matrix_chap5}{{5.1}{33}{水动力参数结果}{equation.5.1}{}}
-\newlabel{eq:linear_damping_matrix_chap5}{{5.2}{33}{水动力参数结果}{equation.5.2}{}}
-\newlabel{eq:quadratic_damping_matrix_chap5}{{5.3}{33}{水动力参数结果}{equation.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}推进器推力拟合}{34}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}推力测试台架搭建}{34}{subsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}推力曲线拟合方法}{35}{subsection.5.2.2}\protected@file@percent }
-\newlabel{eq:thruster_force_fit}{{5.4}{35}{推力曲线拟合方法}{equation.5.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}推力控制准确性验证}{35}{subsection.5.2.3}\protected@file@percent }
-\newlabel{eq:thruster_rmse}{{5.6}{35}{推力控制准确性验证}{equation.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}基于MATLAB/Simulink的仿真环境搭建}{36}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}实机实验}{36}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}本章小结}{36}{section.5.4}\protected@file@percent }
-\pp@pagectr{footnote}{6}{45}{37}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 6 章}总结与展望}{37}{chapter.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}全文总结}{37}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}研究工作展望}{37}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{参考文献}{38}{chapter*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{39}{section*.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{40}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}惯性矩阵的化简与对角化处理}{12}{subsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.1}刚体惯性矩阵的化简}{12}{subsubsection.2.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.2}附加质量矩阵的化简}{12}{subsubsection.2.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.3}总惯性矩阵的最终形式}{13}{subsubsection.2.2.1.3}\protected@file@percent }
+\newlabel{eq:M_simplified}{{2.21}{13}{总惯性矩阵的最终形式}{equation.2.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}科里奥利与向心力矩阵的简化处理}{13}{subsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}阻尼矩阵的线性化与对角化处理}{14}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.1}线性化处理}{14}{subsubsection.2.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.2}对角化处理}{14}{subsubsection.2.2.3.2}\protected@file@percent }
+\newlabel{eq:D_simplified}{{2.25}{14}{对角化处理}{equation.2.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}恢复力向量的物理约束化简}{14}{subsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.1}中性浮力设计}{14}{subsubsection.2.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.2}重心浮心共线设计}{15}{subsubsection.2.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.3}深重心布局}{15}{subsubsection.2.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.4}简化后的恢复力向量}{15}{subsubsection.2.2.4.4}\protected@file@percent }
+\newlabel{eq:g_simplified}{{2.29}{15}{简化后的恢复力向量}{equation.2.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}简化名义模型汇总}{15}{subsection.2.2.5}\protected@file@percent }
+\newlabel{eq:simplified_model}{{2.30}{15}{简化名义模型汇总}{equation.2.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}本章小结}{16}{section.2.3}\protected@file@percent }
+\pp@pagectr{footnote}{3}{25}{17}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 3 章}高精度运动控制算法设计}{17}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}控制架构设计原则}{17}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}姿态控制：SQRT-PID双环结构设计}{17}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}平方根位置环与抗饱和策略}{18}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}角速度PID反馈环}{18}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}平移运动速度控制策略}{18}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}基于物理模型的动力学前馈补偿}{19}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}基于简化模型的前馈}{19}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基于ESO的扰动前馈}{19}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}总前馈力矩}{20}{subsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}过驱动系统的推力分配逻辑}{20}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}推力分配矩阵的推导}{20}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}电机布局与分布图}{20}{subsection.3.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces ROV推进器电机分布图}}{21}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:thruster-layout}{{3.1}{21}{ROV推进器电机分布图}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}推力分配矩阵的具体表达}{21}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}基于伪逆的最小能耗解算}{22}{subsection.3.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}本章小结}{22}{section.3.6}\protected@file@percent }
+\pp@pagectr{footnote}{4}{31}{23}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 4 章}核心硬件平台研发与嵌入式软件开发}{23}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}嵌入式软件框架设计}{23}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}统一设备调度机制}{23}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}ROV 系统设备实例化示例}{23}{subsection.4.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces ROV 设备实例化与调度顺序示意图}}{24}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:ROV_Device_Scheduling}{{4.1}{24}{ROV 设备实例化与调度顺序示意图}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}推进器驱动与底层通信协议}{24}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}DSHOT通信协议实现方法}{25}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{1. DSHOT-PIN 和 DSHOT-PORT 封装}{25}{paragraph*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{2. 数字信号生成与 CRC 校验}{25}{paragraph*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{3. GPIO-PORT 任务执行}{25}{paragraph*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{4. DMA 高速数据搬运与频率控制}{26}{paragraph*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{5. 转速采样与解码}{26}{paragraph*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{6. 调度机制集成}{26}{paragraph*.19}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces DSHOT 协议实现流程示意图}}{26}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:DSHOT_implementation_flow}{{4.2}{26}{DSHOT 协议实现流程示意图}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}DSHOT 转速回传验证实验}{26}{subsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验方法}{26}{paragraph*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验结果与分析}{27}{paragraph*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}智能电源监控与保护系统设计}{27}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}缓启动设计与实验}{27}{subsection.4.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces LM5069 保护板原理图}}{28}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:schematic}{{4.3}{28}{LM5069 保护板原理图}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 缓启动实验：24V 输入下负载电压阶梯型上升，约 200 ms 完成上电。}}{28}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:inrush_exp}{{4.4}{28}{缓启动实验：24V 输入下负载电压阶梯型上升，约 200 ms 完成上电。}{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}欠压与过压保护设计及实验}{28}{subsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}硬件选型总结}{28}{subsection.4.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 过压/欠压保护实验：输出在 18~V 以下或 30~V 以上时自动切断。}}{29}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:uvlo_ovlo_exp}{{4.5}{29}{过压/欠压保护实验：输出在 18~V 以下或 30~V 以上时自动切断。}{figure.caption.25}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces LM5069 电源保护板关键元件及选型计算}}{29}{table.caption.26}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces LM5069 保护板 PCB 布局}}{29}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:pcb_layout}{{4.6}{29}{LM5069 保护板 PCB 布局}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces LM5069 保护板实物图}}{29}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:board_photo}{{4.7}{29}{LM5069 保护板实物图}{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}本章小结}{30}{section.4.4}\protected@file@percent }
+\abx@aux@cite{0}{maliky2019added}
+\abx@aux@segm{0}{0}{maliky2019added}
+\abx@aux@cite{0}{sha2025portable}
+\abx@aux@segm{0}{0}{sha2025portable}
+\pp@pagectr{footnote}{5}{39}{31}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 5 章}控制系统仿真验证与分析}{31}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}基于Simcenter STAR-CCM+的动力学参数求取}{31}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}流体域建立与网格划分}{31}{subsection.5.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Fusion中CFD前处理与表面网格细分效果}}{32}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:cfd_preprocess_fusion}{{5.1}{32}{Fusion中CFD前处理与表面网格细分效果}{figure.caption.28}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces STAR-CCM+网格划分主要参数设置}}{32}{table.caption.29}\protected@file@percent }
+\newlabel{tab:starccm_mesh_parameters}{{5.1}{32}{STAR-CCM+网格划分主要参数设置}{table.caption.29}{}}
+\abx@aux@cite{0}{maliky2019added}
+\abx@aux@segm{0}{0}{maliky2019added}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces STAR-CCM+中水下机器人本体与流体域网格划分结果}}{33}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:starccm_body_and_domain_mesh}{{5.2}{33}{STAR-CCM+中水下机器人本体与流体域网格划分结果}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}仿真工况设置}{33}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.1}附加质量求解工况}{33}{subsubsection.5.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.2}阻尼系数求解工况}{34}{subsubsection.5.1.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 典型工况下水下机器人周围速度云图}}{34}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:starccm_velocity_contour}{{5.3}{34}{典型工况下水下机器人周围速度云图}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}水动力参数结果}{35}{subsection.5.1.3}\protected@file@percent }
+\newlabel{eq:added_mass_matrix_chap5}{{5.1}{35}{水动力参数结果}{equation.5.1}{}}
+\newlabel{eq:linear_damping_matrix_chap5}{{5.2}{35}{水动力参数结果}{equation.5.2}{}}
+\newlabel{eq:quadratic_damping_matrix_chap5}{{5.3}{35}{水动力参数结果}{equation.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}推进器推力拟合}{35}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}推力测试台架搭建}{36}{subsection.5.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces 推力测试台架实物图}}{36}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:thruster_testbench}{{5.4}{36}{推力测试台架实物图}{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}推力曲线拟合方法}{37}{subsection.5.2.2}\protected@file@percent }
+\newlabel{eq:thruster_force_fit}{{5.4}{37}{推力曲线拟合方法}{equation.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}推力控制准确性验证}{37}{subsection.5.2.3}\protected@file@percent }
+\newlabel{eq:thruster_rmse}{{5.6}{37}{推力控制准确性验证}{equation.5.6}{}}
+\abx@aux@cite{0}{von2022open}
+\abx@aux@segm{0}{0}{von2022open}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}基于Simulink的控制算法仿真验证}{38}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}仿真模型建立}{38}{subsection.5.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces MATLAB/Simulink控制算法仿真参数设置}}{38}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:simulink_parameter_setting}{{5.5}{38}{MATLAB/Simulink控制算法仿真参数设置}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}位置与姿态跟踪仿真结果}{38}{subsection.5.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces ROV位置跟踪仿真结果}}{39}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:simulink_position_tracking}{{5.6}{39}{ROV位置跟踪仿真结果}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces ROV姿态跟踪仿真结果}}{39}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:simulink_attitude_tracking}{{5.7}{39}{ROV姿态跟踪仿真结果}{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}静水实机运动控制实验验证}{39}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}实验环境与系统配置}{40}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}位置跟踪与姿态跟踪实验结果}{40}{subsection.5.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces 静水实机实验深度追踪结果}}{40}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:real-test-depth}{{5.8}{40}{静水实机实验深度追踪结果}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces 静水实机实验姿态追踪结果}}{41}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:real-test-att}{{5.9}{41}{静水实机实验姿态追踪结果}{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}本章小结}{41}{section.5.5}\protected@file@percent }
+\pp@pagectr{footnote}{6}{51}{43}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 6 章}总结与展望}{43}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}全文总结}{43}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}研究工作展望}{44}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{参考文献}{45}{chapter*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{47}{section*.39}\protected@file@percent }
 \ttl@finishall
-\HyPL@Entry{48<</S/r>>}
+\HyPL@Entry{55<</S/r>>}
 \ttl@finishall
-\abx@aux@read@bbl@mdfivesum{147AA7D8BB18533D8AEE79657D397AEF}
+\abx@aux@read@bbl@mdfivesum{776058CBA758050ACD41BED1D00A0733}
 \abx@aux@defaultrefcontext{0}{Xu2023}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{Kang2023}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{ma2025state}{none/global//global/global/global}
@@ -198,5 +240,16 @@
 \abx@aux@defaultrefcontext{0}{heshmati2020robust}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{hu2024disturbance}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{Hong2025Review}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{ardusub_autopilot_docs}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{ardupilot_pwm_esc_docs}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{blueos_esc_docs}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{px4_dshot_docs}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{freertos_scheduler_docs}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{xu2022ros2_realtime_executor}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{chaaban2023ros2_scheduling}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{wang2024microros_pods}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{fossen2011handbook}{none/global//global/global/global}
-\gdef \@abspage@last{50}
+\abx@aux@defaultrefcontext{0}{maliky2019added}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{sha2025portable}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{von2022open}{none/global//global/global/global}
+\gdef \@abspage@last{62}

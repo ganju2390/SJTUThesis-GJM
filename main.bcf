@@ -2967,7 +2967,19 @@
     <bcf:citekey order="9" intorder="2">heshmati2020robust</bcf:citekey>
     <bcf:citekey order="10" intorder="1">hu2024disturbance</bcf:citekey>
     <bcf:citekey order="11" intorder="1">Hong2025Review</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">fossen2011handbook</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">ardusub_autopilot_docs</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">ardupilot_pwm_esc_docs</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">blueos_esc_docs</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">px4_dshot_docs</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">freertos_scheduler_docs</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">xu2022ros2_realtime_executor</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">chaaban2023ros2_scheduling</bcf:citekey>
+    <bcf:citekey order="16" intorder="3">wang2024microros_pods</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">fossen2011handbook</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">maliky2019added</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">sha2025portable</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">maliky2019added</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">von2022open</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
