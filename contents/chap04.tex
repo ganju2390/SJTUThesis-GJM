@@ -8,21 +8,21 @@
 
 \subsection{统一设备调度机制}
 
-系统中所有硬件或逻辑功能模块均派生自统一设备基类 \texttt{DeviceBase}，该基类提供标准接口：
+系统中所有硬件或逻辑功能模块均派生自统一设备基类 DeviceBase，该基类提供标准接口：
 
 \begin{itemize}
-    \item \texttt{Update()}：设备状态刷新函数，用于读取传感器数据或更新内部状态。
-    \item \texttt{Handle()}：任务执行函数，用于处理控制逻辑或下发命令。
+    \item Update()：设备状态刷新函数，用于读取传感器数据或更新内部状态。
+    \item Handle()：任务执行函数，用于处理控制逻辑或下发命令。
 \end{itemize}
 
 所有设备在构造时注册到全局设备队列，通过多态方式统一调度，实现以下特点：
 
 \begin{enumerate}[label=(\arabic*)]
-    \item \textbf{自下而上状态更新}：队列头部的底层设备先执行 \texttt{Update()}，逐级向高层模块刷新状态，确保高层逻辑模块使用的数据是最新的。
+    \item \textbf{自下而上状态更新}：队列头部的底层设备先执行 Update()，逐级向高层模块刷新状态，确保高层逻辑模块使用的数据是最新的。
     
-    \item \textbf{自上而下任务执行}：队列尾部的高层控制模块先执行 \texttt{Handle()}，下发控制指令至中低层设备，形成自上而下的任务执行链。
+    \item \textbf{自上而下任务执行}：队列尾部的高层控制模块先执行 Handle()，下发控制指令至中低层设备，形成自上而下的任务执行链。
     
-    \item \textbf{分频调度}：每个设备可以独立设置更新与任务执行频率（\texttt{divisionFactor}），支持异步周期轮询和不同频率的设备协同。
+    \item \textbf{分频调度}：每个设备可以独立设置更新与任务执行频率 divisionFactor，支持异步周期轮询和不同频率的设备协同。
     
     \item \textbf{软件工程优势}：新增设备仅需继承基类并实现接口函数，无需修改调度器即可被统一管理，实现模块化、可扩展性和高可维护性。
 \end{enumerate}
@@ -40,9 +40,9 @@
 在运行时：
 
 \begin{itemize}
-    \item 底层外设首先执行 \texttt{Update()}，刷新传感器状态和执行器反馈。
+    \item 底层外设首先执行 Update()，刷新传感器状态和执行器反馈。
     \item 上位机指令解码模块随后更新状态，提供高层控制所需输入。
-    \item 高层控制模块执行 \texttt{Handle()}，根据底层设备状态和上位机输入计算控制命令，并下发到底层执行器。
+    \item 高层控制模块执行 Handle()，根据底层设备状态和上位机输入计算控制命令，并下发到底层执行器。
 \end{itemize}
 
 该顺序保证了控制决策和指令下发的实时性和一致性，为水下机器人的精确控制提供了稳定的软件基础。
@@ -90,7 +90,7 @@
 每个 DSHOT-PIN 根据期望油门值生成数字信号，并附加 CRC 校验码。生成的信号随后转换为 GPIO BSRR 寄存器的掩码序列，准备通过 DMA 发送到对应 GPIO 端口。
 
 \paragraph{(3). GPIO-PORT 任务执行}  
-在 GPIO-PORT 层，将同一 PORT 下各 PIN 的掩码数组合并，形成统一的 BSRR 掩码数组，通过 \texttt{Handle()} 接口触发发送。由于 STM32F4 的物理限制，只有一个DMA通道支持固定频率数据覆写硬件寄存器，
+在 GPIO-PORT 层，将同一 PORT 下各 PIN 的掩码数组合并，形成统一的 BSRR 掩码数组，通过 Handle() 接口触发发送。由于 STM32F4 的物理限制，只有一个DMA通道支持固定频率数据覆写硬件寄存器，
 因此来自不同GPIO分组的DHSOT-PORT无法同时更新油门，必须依次发送油门信号并采样回传转速。这里嵌入式系统会依次对不同 GPIO-PORT 执行油门发送和转速读取，保证每个端口的 DMA 传输顺序正确，避免硬件冲突。
 
 \paragraph{(4). DMA 高速数据搬运与频率控制}  
@@ -188,6 +188,7 @@ V_\mathrm{OVLO} = 2.5 \left(1 + \frac{R6}{R5}\right) \approx 32.5~\mathrm{V}
 \begin{table}[htbp]
 \centering
 \caption{LM5069 电源保护板关键元件及选型计算}
+\label{tab:hardware-selection}
 \begin{tabular}{|l|l|l|l|}
 \hline
 功能 & 元件 & 说明 & 计算依据 \\
