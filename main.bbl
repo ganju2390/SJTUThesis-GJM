@@ -1391,6 +1391,515 @@
       \field{dateera}{ce}
       \keyw{Hong2025Review}
     \endentry
+    \entry{mamakoukas2021derivative}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8bc741e49f9a5496ae7109fd63b0b6e3}{%
+           family={Mamakoukas},
+           familyi={M\bibinitperiod},
+           given={Giorgos},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a9ccc5ce6cfbc4cd572b1a6a42375a70}{%
+           family={Castano},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5fd2790629b963357665c062c05beba9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Xiaobo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a1870437eefe5c7281f0858414a4676c}{%
+           family={Murphey},
+           familyi={M\bibinitperiod},
+           given={Todd\bibnamedelima D},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=8bc741e49f9a5496ae7109fd63b0b6e3}{%
+           family={Mamakoukas},
+           familyi={M\bibinitperiod},
+           given={Giorgos},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a9ccc5ce6cfbc4cd572b1a6a42375a70}{%
+           family={Castano},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5fd2790629b963357665c062c05beba9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Xiaobo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a1870437eefe5c7281f0858414a4676c}{%
+           family={Murphey},
+           familyi={M\bibinitperiod},
+           given={Todd\bibnamedelima D},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b3e565e76528b16977c5b3ad20fde307}
+      \strng{fullhash}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{fullhashraw}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{bibnamehash}{1785c951c7211fff4c8dfdf822441f53}
+      \strng{authorbibnamehash}{1785c951c7211fff4c8dfdf822441f53}
+      \strng{authornamehash}{b3e565e76528b16977c5b3ad20fde307}
+      \strng{authorfullhash}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{authorfullhashraw}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{nameabibnamehash}{1785c951c7211fff4c8dfdf822441f53}
+      \strng{nameanamehash}{b3e565e76528b16977c5b3ad20fde307}
+      \strng{nameafullhash}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{nameafullhashraw}{b1833e0dbb65863dd3a656bf547a1f93}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Derivative-based Koopman operators for real-time control of robotic systems}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{37}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{2173\bibrangedash 2192}
+      \range{pages}{20}
+      \keyw{mamakoukas2021derivative}
+    \endentry
+    \entry{cui2017adaptive}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=20eb1a651d55da94a68eec73e2c540a0}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Rongxin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1f14a433675e94961d3665b616f6bc66}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chenguang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2af761d9bef859ea29248418adce0dd7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=803ab18852cac1c2a1956a4dc6be9648}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=20eb1a651d55da94a68eec73e2c540a0}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Rongxin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1f14a433675e94961d3665b616f6bc66}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chenguang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2af761d9bef859ea29248418adce0dd7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=803ab18852cac1c2a1956a4dc6be9648}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{026e6516d0e8e8f94e951b9424c8c021}
+      \strng{fullhash}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{fullhashraw}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{bibnamehash}{a4760c35f685995de2a2b0e8a259cfd1}
+      \strng{authorbibnamehash}{a4760c35f685995de2a2b0e8a259cfd1}
+      \strng{authornamehash}{026e6516d0e8e8f94e951b9424c8c021}
+      \strng{authorfullhash}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{authorfullhashraw}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{nameabibnamehash}{a4760c35f685995de2a2b0e8a259cfd1}
+      \strng{nameanamehash}{026e6516d0e8e8f94e951b9424c8c021}
+      \strng{nameafullhash}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{nameafullhashraw}{e32dc005c4ece870a26c9aa8862f32d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics: Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Adaptive neural network control of AUVs with control input nonlinearities using reinforcement learning}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{47}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{1019\bibrangedash 1029}
+      \range{pages}{11}
+      \keyw{cui2017adaptive}
+    \endentry
+    \entry{chu2022path}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f489b9e2ba2ad1d65a8f4ac0c3cf6213}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fulun},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cd517b11edf076967adc081e33d13a5}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Tingjun},
+           giveni={T\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f489b9e2ba2ad1d65a8f4ac0c3cf6213}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fulun},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cd517b11edf076967adc081e33d13a5}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Tingjun},
+           giveni={T\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{fullhash}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{fullhashraw}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{bibnamehash}{7841e61a50d7a60d6502a40fd809ebe6}
+      \strng{authorbibnamehash}{7841e61a50d7a60d6502a40fd809ebe6}
+      \strng{authornamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{authorfullhash}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{authorfullhashraw}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{nameabibnamehash}{7841e61a50d7a60d6502a40fd809ebe6}
+      \strng{nameanamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{nameafullhash}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{nameafullhashraw}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Intelligent Vehicles}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{Path planning based on deep reinforcement learning for autonomous underwater vehicles under ocean current disturbance}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{8}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{108\bibrangedash 120}
+      \range{pages}{13}
+      \keyw{chu2022path}
+    \endentry
+    \entry{hadi2022deep}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a5e2f96b4e5f55d50dc6c38a4d1cb9af}{%
+           family={Hadi},
+           familyi={H\bibinitperiod},
+           given={Behnaz},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a045fb0b641b919857655137529ca8b0}{%
+           family={Khosravi},
+           familyi={K\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9d504acb238c16d402a2aa82ea88a6c}{%
+           family={Sarhadi},
+           familyi={S\bibinitperiod},
+           given={Pouria},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=a5e2f96b4e5f55d50dc6c38a4d1cb9af}{%
+           family={Hadi},
+           familyi={H\bibinitperiod},
+           given={Behnaz},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a045fb0b641b919857655137529ca8b0}{%
+           family={Khosravi},
+           familyi={K\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9d504acb238c16d402a2aa82ea88a6c}{%
+           family={Sarhadi},
+           familyi={S\bibinitperiod},
+           given={Pouria},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e739a894b5a3642ca9d1f9529855a6d8}
+      \strng{fullhash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{fullhashraw}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{bibnamehash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{authorbibnamehash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{authornamehash}{e739a894b5a3642ca9d1f9529855a6d8}
+      \strng{authorfullhash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{authorfullhashraw}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{nameabibnamehash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{nameanamehash}{e739a894b5a3642ca9d1f9529855a6d8}
+      \strng{nameafullhash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{nameafullhashraw}{dbc99f6e200990df27d8bff370b63d54}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Ocean Research}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Deep reinforcement learning for adaptive path planning and control of an autonomous underwater vehicle}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{129}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{103326}
+      \range{pages}{1}
+      \keyw{hadi2022deep}
+    \endentry
+    \entry{wang2023path}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=c97a05151ba125dc0beb11eb6e2ed62a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhanyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cb7e09144a040f7c6b239146c288fade}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yulong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f16396ca551d8d575e0fcb4b8a6aa5cd}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Caipeng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=847033db4148b2ca5e23d6d95f764388}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=60b04d086f838bf47c5aef1f411c3d95}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=c97a05151ba125dc0beb11eb6e2ed62a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhanyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cb7e09144a040f7c6b239146c288fade}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yulong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f16396ca551d8d575e0fcb4b8a6aa5cd}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Caipeng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=847033db4148b2ca5e23d6d95f764388}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=60b04d086f838bf47c5aef1f411c3d95}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{17144599881e5e3ea06076d3c0308552}
+      \strng{fullhash}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{fullhashraw}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{bibnamehash}{9ba6d93cfa3f038b55e4f39bc9ffd6bf}
+      \strng{authorbibnamehash}{9ba6d93cfa3f038b55e4f39bc9ffd6bf}
+      \strng{authornamehash}{17144599881e5e3ea06076d3c0308552}
+      \strng{authorfullhash}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{authorfullhashraw}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{nameabibnamehash}{9ba6d93cfa3f038b55e4f39bc9ffd6bf}
+      \strng{nameanamehash}{17144599881e5e3ea06076d3c0308552}
+      \strng{nameafullhash}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{nameafullhashraw}{2246f0ba792f02cac6643c80e85e252d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ocean Engineering}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Path-following optimal control of autonomous underwater vehicle based on deep reinforcement learning}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{268}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{113407}
+      \range{pages}{1}
+      \keyw{wang2023path}
+    \endentry
+    \entry{chu2020motion}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=115afe6cc7f667cde499464315bf3ce5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6426d3a36c3c69258d0a7fb6630f00c8}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Daqi},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8d0ca371033ee2f342e89bf1725daba6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingjun},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=115afe6cc7f667cde499464315bf3ce5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6426d3a36c3c69258d0a7fb6630f00c8}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Daqi},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8d0ca371033ee2f342e89bf1725daba6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingjun},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{fullhash}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{fullhashraw}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{bibnamehash}{a4510d96fb84e82ddbb84696f7200e13}
+      \strng{authorbibnamehash}{a4510d96fb84e82ddbb84696f7200e13}
+      \strng{authornamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{authorfullhash}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{authorfullhashraw}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{nameabibnamehash}{a4510d96fb84e82ddbb84696f7200e13}
+      \strng{nameanamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{nameafullhash}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{nameafullhashraw}{33615b854b503a5d325cdb2be7f69e7f}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IET Intelligent Transport Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{7}
+      \field{title}{Motion control of unmanned underwater vehicles via deep imitation reinforcement learning algorithm}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{764\bibrangedash 774}
+      \range{pages}{11}
+      \keyw{chu2020motion}
+    \endentry
     \entry{ardusub_autopilot_docs}{online}{}{}
       \name{author}{1}{}{%
         {{hash=f67513f9bb774be69c4931a435f90ac0}{%
@@ -1417,8 +1926,8 @@
       \strng{nameanamehash}{f67513f9bb774be69c4931a435f90ac0}
       \strng{nameafullhash}{f67513f9bb774be69c4931a435f90ac0}
       \strng{nameafullhashraw}{f67513f9bb774be69c4931a435f90ac0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1464,8 +1973,8 @@
       \strng{nameanamehash}{002e4a64dbc1404d94eef1845911c190}
       \strng{nameafullhash}{002e4a64dbc1404d94eef1845911c190}
       \strng{nameafullhashraw}{002e4a64dbc1404d94eef1845911c190}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1511,8 +2020,8 @@
       \strng{nameanamehash}{f168310fb01a9d93acc69ea086d780cb}
       \strng{nameafullhash}{f168310fb01a9d93acc69ea086d780cb}
       \strng{nameafullhashraw}{f168310fb01a9d93acc69ea086d780cb}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1558,8 +2067,8 @@
       \strng{nameanamehash}{b52b778c63203841cf2cbbd45551085d}
       \strng{nameafullhash}{b52b778c63203841cf2cbbd45551085d}
       \strng{nameafullhashraw}{b52b778c63203841cf2cbbd45551085d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1605,8 +2114,8 @@
       \strng{nameanamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{nameafullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{nameafullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1809,6 +2318,7 @@
       \strng{nameanamehash}{bcc0ee0115ca53333821bd83b79eadf2}
       \strng{nameafullhash}{5837476617fd3b9ecad130297b03e2c4}
       \strng{nameafullhashraw}{5837476617fd3b9ecad130297b03e2c4}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}

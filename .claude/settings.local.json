@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(kpsewhich sjtuthesis.cls)"
+      "Bash(kpsewhich sjtuthesis.cls)",
+      "WebFetch(domain:ieeexplore.ieee.org)",
+      "WebFetch(domain:doi.org)"
     ],
     "additionalDirectories": [
       "c:\\Users\\awerg\\AppData\\Roaming\\Code\\User"

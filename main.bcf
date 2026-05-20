@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.11" bltxversion="3.21" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.11" bltxversion="3.20" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -514,7 +514,6 @@
     <bcf:option datatype="string">alphaothers</bcf:option>
     <bcf:option datatype="string">sortalphaothers</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
-    <bcf:option datatype="string">citepagerange</bcf:option>
     <bcf:option datatype="string">texencoding</bcf:option>
     <bcf:option datatype="string">bibencoding</bcf:option>
     <bcf:option datatype="string">sortingtemplatename</bcf:option>
@@ -963,11 +962,6 @@
         <bcf:map_step map_field_set="usera" map_field_value="J"/>
       </bcf:map>
       <bcf:map>
-        <bcf:per_type>article</bcf:per_type>
-        <bcf:map_step map_field_source="eid" map_final="1"/>
-        <bcf:map_step map_field_set="pages" map_origfieldval="1"/>
-      </bcf:map>
-      <bcf:map>
         <bcf:per_type>periodical</bcf:per_type>
         <bcf:map_step map_field_set="usera" map_field_value="J"/>
         <bcf:map_step map_field_source="author"/>
@@ -1031,7 +1025,6 @@
       <bcf:map>
         <bcf:per_type>legislation</bcf:per_type>
         <bcf:map_step map_type_source="legislation" map_type_target="archive"/>
-        <bcf:map_step map_field_set="entrysubtype" map_field_value="legislation"/>
       </bcf:map>
       <bcf:map>
         <bcf:per_type>archive</bcf:per_type>
@@ -2971,19 +2964,25 @@
     <bcf:citekey order="13" intorder="2">heshmati2020robust</bcf:citekey>
     <bcf:citekey order="14" intorder="1">hu2024disturbance</bcf:citekey>
     <bcf:citekey order="15" intorder="1">Hong2025Review</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">ardusub_autopilot_docs</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">ardupilot_pwm_esc_docs</bcf:citekey>
-    <bcf:citekey order="17" intorder="2">blueos_esc_docs</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">px4_dshot_docs</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">freertos_scheduler_docs</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">xu2022ros2_realtime_executor</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">chaaban2023ros2_scheduling</bcf:citekey>
-    <bcf:citekey order="20" intorder="3">wang2024microros_pods</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">fossen2011handbook</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">maliky2019added</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">sha2025portable</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">maliky2019added</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">von2022open</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">mamakoukas2021derivative</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">cui2017adaptive</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">chu2022path</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">hadi2022deep</bcf:citekey>
+    <bcf:citekey order="18" intorder="3">wang2023path</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">chu2020motion</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">ardusub_autopilot_docs</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">ardupilot_pwm_esc_docs</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">blueos_esc_docs</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">px4_dshot_docs</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">freertos_scheduler_docs</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">xu2022ros2_realtime_executor</bcf:citekey>
+    <bcf:citekey order="24" intorder="2">chaaban2023ros2_scheduling</bcf:citekey>
+    <bcf:citekey order="24" intorder="3">wang2024microros_pods</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">fossen2011handbook</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">maliky2019added</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">sha2025portable</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">maliky2019added</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">von2022open</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

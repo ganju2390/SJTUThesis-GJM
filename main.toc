@@ -7,8 +7,7 @@
 \contentsline {subsection}{\numberline {1.2.2}模型控制}{3}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}基于学习的控制}{4}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}控制硬件与嵌入式实现}{4}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}小结}{5}{subsection.1.2.5}%
-\contentsline {section}{\numberline {1.3}本文主要研究内容与目标}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.3}本文主要研究内容与目标}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}论文结构安排}{6}{section.1.4}%
 \contentsline {chapter}{\numberline {第 2 章}ROV系统建模}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}六自由度动力学建模理论}{8}{section.2.1}%
@@ -38,59 +37,53 @@
 \contentsline {section}{\numberline {3.1}控制架构设计原则}{17}{section.3.1}%
 \contentsline {section}{\numberline {3.2}姿态控制：SQRT-PID双环姿态控制器设计}{18}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}平方根位置环与抗饱和策略}{18}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}角速度PID反馈环}{18}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}角速度PID反馈环}{19}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}平移运动位置控制策略}{19}{section.3.3}%
 \contentsline {section}{\numberline {3.4}基于物理模型的动力学前馈补偿}{20}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}基于简化模型的前馈}{20}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}基于ESO的扰动前馈}{20}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}基于ESO的扰动前馈}{21}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}总前馈力矩}{21}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}过驱动系统的推力分配逻辑}{21}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}推力分配矩阵的推导}{21}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}电机布局与分布图}{21}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}推力分配矩阵的具体表达}{22}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.5}过驱系统的推力分配}{21}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}推力分配矩阵的推导}{22}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}电机布局与分布图}{22}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}推力分配矩阵的具体表达}{23}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}基于伪逆的最小能耗解算}{23}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}本章小结}{23}{section.3.6}%
-\contentsline {chapter}{\numberline {第 4 章}核心硬件平台研发与嵌入式软件开发}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}嵌入式软件框架设计}{24}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}统一设备调度机制}{24}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}ROV 系统设备实例化示例}{24}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}推进器驱动与底层通信协议}{25}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}DSHOT通信协议实现方法}{26}{subsection.4.2.1}%
-\contentsline {paragraph}{(1). DSHOT-PIN 和 DSHOT-PORT 封装}{26}{paragraph*.13}%
-\contentsline {paragraph}{(2). 数字信号生成与 CRC 校验}{26}{paragraph*.14}%
-\contentsline {paragraph}{(3). GPIO-PORT 任务执行}{26}{paragraph*.15}%
-\contentsline {paragraph}{(4). DMA 高速数据搬运与频率控制}{27}{paragraph*.16}%
-\contentsline {paragraph}{(5). 转速采样与解码}{27}{paragraph*.17}%
-\contentsline {paragraph}{(6). 调度机制集成}{27}{paragraph*.18}%
-\contentsline {subsection}{\numberline {4.2.2}DSHOT 转速回传验证实验}{27}{subsection.4.2.2}%
-\contentsline {paragraph}{实验方法}{27}{paragraph*.20}%
-\contentsline {paragraph}{实验结果与分析}{28}{paragraph*.21}%
-\contentsline {section}{\numberline {4.3}智能电源监控与保护系统设计}{28}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}缓启动设计与实验}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}欠压与过压保护设计及实验}{29}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}硬件选型总结}{29}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}本章小结}{31}{section.4.4}%
-\contentsline {chapter}{\numberline {第 5 章}控制系统仿真验证与分析}{32}{chapter.5}%
-\contentsline {section}{\numberline {5.1}基于Simcenter STAR-CCM+的动力学参数求取}{32}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}流体域建立与网格划分}{32}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}仿真工况设置}{34}{subsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}附加质量求解工况}{34}{subsubsection.5.1.2.1}%
-\contentsline {subsubsection}{\numberline {5.1.2.2}阻尼系数求解工况}{35}{subsubsection.5.1.2.2}%
-\contentsline {subsection}{\numberline {5.1.3}水动力参数结果}{36}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}推进器推力拟合}{36}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}推力测试台架搭建}{37}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}推力曲线拟合方法}{38}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}基于Simulink的控制算法仿真验证}{38}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}仿真模型建立}{38}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}位置与姿态跟踪仿真结果}{39}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}静水实机运动控制实验验证}{40}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}实验环境与系统配置}{40}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}位置跟踪与姿态跟踪实验结果}{40}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}本章小结}{41}{section.5.5}%
+\contentsline {section}{\numberline {3.6}本章小结}{24}{section.3.6}%
+\contentsline {chapter}{\numberline {第 4 章}核心硬件平台研发与嵌入式软件开发}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}嵌入式软件框架设计}{26}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}统一设备调度机制}{26}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}ROV 系统设备实例化示例}{27}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}推进器驱动与底层通信协议}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}DSHOT通信协议实现方法}{28}{subsection.4.2.1}%
+\contentsline {paragraph}{(1). DSHOT-PIN 和 DSHOT-PORT 封装}{29}{paragraph*.15}%
+\contentsline {paragraph}{(2). 数字信号生成与 CRC 校验}{29}{paragraph*.16}%
+\contentsline {paragraph}{(3). GPIO-PORT 任务执行}{29}{paragraph*.17}%
+\contentsline {paragraph}{(4). DMA 高速数据搬运与频率控制}{30}{paragraph*.18}%
+\contentsline {paragraph}{(5). 转速采样与解码}{30}{paragraph*.19}%
+\contentsline {paragraph}{(6). 调度机制集成}{30}{paragraph*.20}%
+\contentsline {section}{\numberline {4.3}智能电源监控与保护系统设计}{30}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}缓启动设计与实验}{31}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}欠压与过压保护设计及实验}{31}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}硬件选型总结}{32}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}本章小结}{33}{section.4.4}%
+\contentsline {chapter}{\numberline {第 5 章}控制系统仿真验证与实验分析}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}基于Simcenter STAR-CCM+的动力学参数求取}{34}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}流体域建立与网格划分}{34}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}仿真工况设置}{36}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}附加质量求解工况}{36}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}阻尼系数求解工况}{37}{subsubsection.5.1.2.2}%
+\contentsline {subsection}{\numberline {5.1.3}水动力参数结果}{37}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}基于Simulink的控制算法仿真验证}{38}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}仿真模型建立}{38}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}位置与姿态跟踪仿真结果}{38}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}静水实机运动控制实验验证}{40}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}实验环境与系统配置}{40}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}位置跟踪与姿态跟踪实验结果}{40}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}本章小结}{42}{section.5.4}%
 \contentsline {chapter}{\numberline {第 6 章}总结与展望}{43}{chapter.6}%
 \contentsline {section}{\numberline {6.1}全文总结}{43}{section.6.1}%
 \contentsline {section}{\numberline {6.2}研究工作展望}{44}{section.6.2}%
-\contentsline {chapter}{参考文献}{45}{chapter*.37}%
-\contentsline {chapter}{致\quad 谢}{47}{section*.38}%
+\contentsline {chapter}{参考文献}{45}{chapter*.36}%
+\contentsline {chapter}{致\quad 谢}{48}{section*.37}%
 \contentsfinish 
 \contentsfinish 
