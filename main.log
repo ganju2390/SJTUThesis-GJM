@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.16)  20 MAY 2026 21:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.16)  23 MAY 2026 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1576,7 +1576,7 @@ LaTeX Info: Command `\ddddot' is already robust on input line 20.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 14.22636pt
-* modes: 
+* modes: twoside 
 * h-part:(L,W,R)=(71.13188pt, 441.01775pt, 71.13188pt)
 * v-part:(T,H,B)=(99.58464pt, 631.65118pt, 113.81102pt)
 * \paperwidth=597.50787pt
@@ -1590,7 +1590,7 @@ LaTeX Info: Command `\ddddot' is already robust on input line 20.
 * \headsep=14.22636pt
 * \topskip=12.0pt
 * \footskip=28.45274pt
-* \marginparwidth=47.0pt
+* \marginparwidth=98.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1598,8 +1598,8 @@ LaTeX Info: Command `\ddddot' is already robust on input line 20.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1752,6 +1752,11 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 
 
 ]
+
+[2
+
+
+]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
 (Font)              scaled to size 16.06pt on input line 26.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
@@ -1774,7 +1779,9 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 16.06pt on input line 26.
 
 
-[2
+[3]
+
+[4
 
 
 ]
@@ -1840,7 +1847,9 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 6.0pt on input line 32.
 
 
-[3
+[5]
+
+[6
 
 
 ] (./contents/abstract.tex
@@ -1848,32 +1857,39 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 [1
 
 
-
-
-])
+]
 
 [2
 
-
-] (./main.toc
+])
 
 [3
 
+]
+
+[4
+
+] (./main.toc
+
+[5
 
 ]
 
-[4])
+[6])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[5] (./contents/intro.tex
+[7]
+
+[8
+
+] (./contents/intro.tex
 第 1 章
 
 
 [1
-
 
 ]
 
@@ -1891,19 +1907,17 @@ File: figures/PaperStructure.png Graphic file (type bmp)
 [6]) (./contents/chap02.tex
 
 [7]
-第 2 章
-File: figures/Frame.png Graphic file (type bmp)
-<figures/Frame.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 
 [8
 
 ]
+第 2 章
+
 
 [9]
+File: figures/Frame.png Graphic file (type bmp)
+<figures/Frame.png>
+
 
 [10]
 
@@ -1915,64 +1929,70 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14]
 
-[15]) (./contents/chap03.tex
+[15]
 
-[16]
+[16]) (./contents/chap03.tex
+
+[17]
+
+[18]
 第 3 章
 File: figures/../figures/control_fig.png Graphic file (type bmp)
 <figures/../figures/control_fig.png>
 
 
-[17
+[19
 
 ]
-
-[18]
-
-[19]
 
 [20]
 
 [21]
-File: figures/../figures/PropulsionLayout.png Graphic file (type bmp)
-<figures/../figures/PropulsionLayout.png>
-
 
 [22]
 
 [23]
+File: figures/../figures/PropulsionLayout.png Graphic file (type bmp)
+<figures/../figures/PropulsionLayout.png>
 
-[24]) (./contents/chap04.tex
+
+[24]
 
 [25]
+
+[26]) (./contents/chap04.tex
+
+[27]
+
+[28
+
+]
 第 4 章
 
 
-[26
-
-]
+[29]
 File: figures/../figures/FineMote.png Graphic file (type bmp)
 <figures/../figures/FineMote.png>
 
 
-[27]
+[30]
 File: figures/../figures/DSHOT_Frame.png Graphic file (type bmp)
 <figures/../figures/DSHOT_Frame.png>
 
 
-[28]
+[31]
 Overfull \hbox (22.95584pt too wide) in paragraph at lines 117--118
 \TU/TeXGyreTermesX(0)/b/n/12.045 (4). DMA \TU/SimSun(0)/b/n/12.045 高 速 数 据 搬 运 与 频 率 控 制[] \TU/SimSun(0)/m/n/12.045 为 了 满 足 \TU/TeXGyreTermesX(0)/m/n/12.045 DSHOT \TU/SimSun(0)/m/n/12.045 协 议 的 更 新 频 率  |（例 如 \TU/TeXGyreTermesX(0)/m/n/12.045 DSHOT300
  []
 
 
 
-[29]
+[32]
 File: figures/../figures/DSHOT.png Graphic file (type bmp)
 <figures/../figures/DSHOT.png>
 
 
-[30]
+[33]
 File: figures/../figures/LM5069-1.png Graphic file (type bmp)
 <figures/../figures/LM5069-1.png>
 File: figures/../figures/LM5069-2.png Graphic file (type bmp)
@@ -1981,7 +2001,7 @@ File: figures/../figures/LM5069-3.png Graphic file (type bmp)
 <figures/../figures/LM5069-3.png>
 
 
-[31]
+[34]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
 (Font)              scaled to size 7.0pt on input line 212.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
@@ -2033,13 +2053,13 @@ File: figures/../figures/LM5069-4.jpg Graphic file (type bmp)
 <figures/../figures/LM5069-4.jpg>
 ) (./contents/chap05.tex
 
-[32]
+[35]
 
-[33]
+[36]
 第 5 章
 
 
-[34
+[37
 
 ]
 File: figures/../figures/CFD-PRE.png Graphic file (type bmp)
@@ -2050,14 +2070,14 @@ File: figures/../figures/starccm_domain_mesh.png Graphic file (type bmp)
 <figures/../figures/starccm_domain_mesh.png>
 
 
-[35]
+[38]
 
-[36]
+[39]
 File: figures/../figures/starccm_velocity_contour.png Graphic file (type bmp)
 <figures/../figures/starccm_velocity_contour.png>
 
 
-[37]
+[40]
 File: figures/../figures/sim-1.png Graphic file (type bmp)
 <figures/../figures/sim-1.png>
 File: figures/../figures/sim-2.png Graphic file (type bmp)
@@ -2072,30 +2092,35 @@ File: figures/../figures/simulink_attitude_tracking.png Graphic file (type bmp)
 <figures/../figures/simulink_attitude_tracking.png>
 
 
-[38]
+[41]
 
-[39]
+[42]
+File: figures/../figures/demo.png Graphic file (type bmp)
+<figures/../figures/demo.png>
 
-[40]
+
+[43]
 File: figures/../figures/real-test-depth.png Graphic file (type bmp)
 <figures/../figures/real-test-depth.png>
 File: figures/../figures/real-test-att.png Graphic file (type bmp)
 <figures/../figures/real-test-att.png>
 
 
-[41]) (./contents/summary.tex
+[44]) (./contents/summary.tex
 
-[42]
+[45]
+
+[46
+
+]
 第 6 章
 
 
-[43
+[47])
 
-])
+[48]
 
-[44]
-
-[45
+[49
 
 ]
 
@@ -2126,18 +2151,24 @@ Package fontspec Info:
 
 
 
-[46]
+[50]
 
-[47] (./contents/acknowledgements.tex) (./contents/digest.tex)
+[51]
 
-[48
+[52
 
+] (./contents/acknowledgements.tex) (./contents/digest.tex)
+
+[53
 
 
 ]
 
-[1
+[54
 
+]
+
+[1
 
 
 ]
@@ -2178,18 +2209,18 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4D36A9ABDC92341F746152FAF58DD6E2;11091.
+(rerunfilecheck)             Checksum: 117182180D6EDA7E2D100681A42FC84A;11091.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60584 strings out of 475796
- 1425501 string characters out of 5774032
- 2394483 words of memory out of 5000000
- 82569 multiletter control sequences out of 15000+600000
+ 60596 strings out of 475796
+ 1425843 string characters out of 5774032
+ 2394593 words of memory out of 5000000
+ 82580 multiletter control sequences out of 15000+600000
  631514 words of font info for 240 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  107i,13n,124p,1798b,7388s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (63 pages).
+Output written on main.pdf (75 pages).

@@ -314,75 +314,190 @@
       \range{pages}{1}
       \keyw{singh2022review}
     \endentry
-    \entry{Zhao2024}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{4}{}{%
-        {{hash=9bf17a6ef4b2cb446f821e4545699a90}{%
-           family={赵大刚},
-           familyi={赵\bibinitperiod}}}%
-        {{hash=b0b9c12a49f3f44eba46b777990eb1c2}{%
-           family={张顺},
-           familyi={张\bibinitperiod}}}%
-        {{hash=9d53b358023ab9aa037db091933b3102}{%
-           family={高适},
-           familyi={高\bibinitperiod}}}%
-        {{hash=1fbd2099661708f6f2bcc3fd36ecb283}{%
-           family={钟祥海},
-           familyi={钟\bibinitperiod}}}%
+    \entry{hasan2024oceanic}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=3353998f74103c194cd2d66d1b7dd7ff}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Kayes},
+           giveni={K\bibinitperiod}}}%
+        {{hash=faad9f02d95c6094cbbca0d39d61eda1}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Shameem},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f7d043a405cc068c023fa7699ed321e3}{%
+           family={Liaf},
+           familyi={L\bibinitperiod},
+           given={Abrar\bibnamedelima Fahim},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=01650feb375545faefe7295957cb2821}{%
+           family={Karimi},
+           familyi={K\bibinitperiod},
+           given={Mazaher},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e29b56d22e396e773ee80bfbcf6fd0d2}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Tofael},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ed35cfd5edae162f40204af8b2cece4e}{%
+           family={Shawon},
+           familyi={S\bibinitperiod},
+           given={Mehedi\bibnamedelima Azad},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a5186597376c7b31a4aa4fc0c6534565}{%
+           family={Mekhilef},
+           familyi={M\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod}}}%
       }
-      \true{morenamea}
-      \name{namea}{4}{}{%
-        {{hash=9bf17a6ef4b2cb446f821e4545699a90}{%
-           family={赵大刚},
-           familyi={赵\bibinitperiod}}}%
-        {{hash=b0b9c12a49f3f44eba46b777990eb1c2}{%
-           family={张顺},
-           familyi={张\bibinitperiod}}}%
-        {{hash=9d53b358023ab9aa037db091933b3102}{%
-           family={高适},
-           familyi={高\bibinitperiod}}}%
-        {{hash=1fbd2099661708f6f2bcc3fd36ecb283}{%
-           family={钟祥海},
-           familyi={钟\bibinitperiod}}}%
+      \name{namea}{7}{}{%
+        {{hash=3353998f74103c194cd2d66d1b7dd7ff}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Kayes},
+           giveni={K\bibinitperiod}}}%
+        {{hash=faad9f02d95c6094cbbca0d39d61eda1}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Shameem},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f7d043a405cc068c023fa7699ed321e3}{%
+           family={Liaf},
+           familyi={L\bibinitperiod},
+           given={Abrar\bibnamedelima Fahim},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=01650feb375545faefe7295957cb2821}{%
+           family={Karimi},
+           familyi={K\bibinitperiod},
+           given={Mazaher},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e29b56d22e396e773ee80bfbcf6fd0d2}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Tofael},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ed35cfd5edae162f40204af8b2cece4e}{%
+           family={Shawon},
+           familyi={S\bibinitperiod},
+           given={Mehedi\bibnamedelima Azad},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a5186597376c7b31a4aa4fc0c6534565}{%
+           family={Mekhilef},
+           familyi={M\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod}}}%
       }
       \list{language}{1}{%
-        {chinese}%
+        {english}%
       }
       \list{publisher}{1}{%
-        {中国舰船研究 编辑部}%
+        {IEEE}%
       }
-      \strng{namehash}{d116f111cc7258929cba1e2518520a29}
-      \strng{fullhash}{30dc7ba408072a1c9e04ab00a4f543de}
-      \strng{fullhashraw}{30dc7ba408072a1c9e04ab00a4f543de}
-      \strng{bibnamehash}{f6fa3e27da58f4d6a4c7bdca0f53fef0}
-      \strng{authorbibnamehash}{f6fa3e27da58f4d6a4c7bdca0f53fef0}
-      \strng{authornamehash}{d116f111cc7258929cba1e2518520a29}
-      \strng{authorfullhash}{30dc7ba408072a1c9e04ab00a4f543de}
-      \strng{authorfullhashraw}{30dc7ba408072a1c9e04ab00a4f543de}
-      \strng{nameabibnamehash}{f6fa3e27da58f4d6a4c7bdca0f53fef0}
-      \strng{nameanamehash}{d116f111cc7258929cba1e2518520a29}
-      \strng{nameafullhash}{30dc7ba408072a1c9e04ab00a4f543de}
-      \strng{nameafullhashraw}{30dc7ba408072a1c9e04ab00a4f543de}
+      \strng{namehash}{11275ce631339df8b3348c4f275314cb}
+      \strng{fullhash}{c891c11a0185d061fcf6207f94dd1309}
+      \strng{fullhashraw}{c891c11a0185d061fcf6207f94dd1309}
+      \strng{bibnamehash}{c637033a04006e2e5e530fbe3c30ac0b}
+      \strng{authorbibnamehash}{c637033a04006e2e5e530fbe3c30ac0b}
+      \strng{authornamehash}{11275ce631339df8b3348c4f275314cb}
+      \strng{authorfullhash}{c891c11a0185d061fcf6207f94dd1309}
+      \strng{authorfullhashraw}{c891c11a0185d061fcf6207f94dd1309}
+      \strng{nameabibnamehash}{c637033a04006e2e5e530fbe3c30ac0b}
+      \strng{nameanamehash}{11275ce631339df8b3348c4f275314cb}
+      \strng{nameafullhash}{c891c11a0185d061fcf6207f94dd1309}
+      \strng{nameafullhashraw}{c891c11a0185d061fcf6207f94dd1309}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Chinese Journal of Ship Research}
+      \field{journaltitle}{IEEE Access}
       \field{langid}{english}
-      \field{languageid}{chinese}
-      \field{lansortorder}{1}
-      \field{number}{5}
-      \field{title}{海流对水下航行器运动及载荷影响研究综述}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Oceanic challenges to technological solutions: A review of autonomous underwater vehicle path technologies in biomimicry, control, navigation, and sensing}
       \field{usera}{J}
-      \field{userd}{chinese}
-      \field{userf}{chinese}
-      \field{volume}{19}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{12}
       \field{year}{2024}
       \field{dateera}{ce}
-      \field{pages}{1\bibrangedash 16}
-      \range{pages}{16}
-      \keyw{Zhao2024}
+      \field{pages}{46202\bibrangedash 46231}
+      \range{pages}{30}
+      \keyw{hasan2024oceanic}
+    \endentry
+    \entry{alexandris2024positioning}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7523e270fb1aa2d817055d28f46e683a}{%
+           family={Alexandris},
+           familyi={A\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=11f297513134d49a8532868829236b24}{%
+           family={Papageorgas},
+           familyi={P\bibinitperiod},
+           given={Panagiotis},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a1b201cc11ecbe9b716e25092b744d7c}{%
+           family={Piromalis},
+           familyi={P\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=7523e270fb1aa2d817055d28f46e683a}{%
+           family={Alexandris},
+           familyi={A\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=11f297513134d49a8532868829236b24}{%
+           family={Papageorgas},
+           familyi={P\bibinitperiod},
+           given={Panagiotis},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a1b201cc11ecbe9b716e25092b744d7c}{%
+           family={Piromalis},
+           familyi={P\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{5d2c1d5e336be6ccde7bf960cb8d4882}
+      \strng{fullhash}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{fullhashraw}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{bibnamehash}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{authorbibnamehash}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{authornamehash}{5d2c1d5e336be6ccde7bf960cb8d4882}
+      \strng{authorfullhash}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{authorfullhashraw}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{nameabibnamehash}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{nameanamehash}{5d2c1d5e336be6ccde7bf960cb8d4882}
+      \strng{nameafullhash}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \strng{nameafullhashraw}{6128a0d1807c7eb8ac2fb1358d5f9822}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{21}
+      \field{title}{Positioning systems for unmanned underwater vehicles: A comprehensive review}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{14}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{9671}
+      \range{pages}{1}
+      \keyw{alexandris2024positioning}
     \endentry
     \entry{wu2024review}{article}{}{}
       \name{author}{5}{}{%
@@ -457,8 +572,8 @@
       \strng{nameanamehash}{a03a9c883c556e8969c761efb826a315}
       \strng{nameafullhash}{2e39d8b9101b95e6fea97e701972bfa7}
       \strng{nameafullhashraw}{2e39d8b9101b95e6fea97e701972bfa7}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Marine Science and Engineering}
@@ -476,6 +591,280 @@
       \field{pages}{428}
       \range{pages}{1}
       \keyw{wu2024review}
+    \endentry
+    \entry{zhou2024simplified}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=872dbe0295f11607051fd98aaf5f0ef2}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Manli},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c6d18e2d167e1a3dc88c0166bbc3471}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d55ba1c593a8c96c5c00bb3a1b1b5eeb}{%
+           family={Lv},
+           familyi={L\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5c689f5303ffb71b39f1ed4cdaae6270}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=608f013aa0332898ce5d306b722a65af}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Yingying},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=633ad191391be7eaeda11e58021619d1}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{namea}{6}{}{%
+        {{hash=872dbe0295f11607051fd98aaf5f0ef2}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Manli},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c6d18e2d167e1a3dc88c0166bbc3471}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d55ba1c593a8c96c5c00bb3a1b1b5eeb}{%
+           family={Lv},
+           familyi={L\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5c689f5303ffb71b39f1ed4cdaae6270}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=608f013aa0332898ce5d306b722a65af}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Yingying},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=633ad191391be7eaeda11e58021619d1}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers Media SA}%
+      }
+      \strng{namehash}{c77efebb8b986f844fb396cefd720ce4}
+      \strng{fullhash}{49a83d98e52cea636d42529d91b0b9d9}
+      \strng{fullhashraw}{49a83d98e52cea636d42529d91b0b9d9}
+      \strng{bibnamehash}{709b32cc601a9bf3d02b86aff6b1cccf}
+      \strng{authorbibnamehash}{709b32cc601a9bf3d02b86aff6b1cccf}
+      \strng{authornamehash}{c77efebb8b986f844fb396cefd720ce4}
+      \strng{authorfullhash}{49a83d98e52cea636d42529d91b0b9d9}
+      \strng{authorfullhashraw}{49a83d98e52cea636d42529d91b0b9d9}
+      \strng{nameabibnamehash}{709b32cc601a9bf3d02b86aff6b1cccf}
+      \strng{nameanamehash}{c77efebb8b986f844fb396cefd720ce4}
+      \strng{nameafullhash}{49a83d98e52cea636d42529d91b0b9d9}
+      \strng{nameafullhashraw}{49a83d98e52cea636d42529d91b0b9d9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Marine Science}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{A simplified decision feedback Chebyshev function link neural network with intelligent initialization for underwater acoustic channel equalization}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{10}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{1331635}
+      \range{pages}{1}
+      \keyw{zhou2024simplified}
+    \endentry
+    \entry{Zhao2024}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=9bf17a6ef4b2cb446f821e4545699a90}{%
+           family={赵大刚},
+           familyi={赵\bibinitperiod}}}%
+        {{hash=b0b9c12a49f3f44eba46b777990eb1c2}{%
+           family={张顺},
+           familyi={张\bibinitperiod}}}%
+        {{hash=9d53b358023ab9aa037db091933b3102}{%
+           family={高适},
+           familyi={高\bibinitperiod}}}%
+        {{hash=1fbd2099661708f6f2bcc3fd36ecb283}{%
+           family={钟祥海},
+           familyi={钟\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{4}{}{%
+        {{hash=9bf17a6ef4b2cb446f821e4545699a90}{%
+           family={赵大刚},
+           familyi={赵\bibinitperiod}}}%
+        {{hash=b0b9c12a49f3f44eba46b777990eb1c2}{%
+           family={张顺},
+           familyi={张\bibinitperiod}}}%
+        {{hash=9d53b358023ab9aa037db091933b3102}{%
+           family={高适},
+           familyi={高\bibinitperiod}}}%
+        {{hash=1fbd2099661708f6f2bcc3fd36ecb283}{%
+           family={钟祥海},
+           familyi={钟\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{publisher}{1}{%
+        {中国舰船研究 编辑部}%
+      }
+      \strng{namehash}{d116f111cc7258929cba1e2518520a29}
+      \strng{fullhash}{30dc7ba408072a1c9e04ab00a4f543de}
+      \strng{fullhashraw}{30dc7ba408072a1c9e04ab00a4f543de}
+      \strng{bibnamehash}{f6fa3e27da58f4d6a4c7bdca0f53fef0}
+      \strng{authorbibnamehash}{f6fa3e27da58f4d6a4c7bdca0f53fef0}
+      \strng{authornamehash}{d116f111cc7258929cba1e2518520a29}
+      \strng{authorfullhash}{30dc7ba408072a1c9e04ab00a4f543de}
+      \strng{authorfullhashraw}{30dc7ba408072a1c9e04ab00a4f543de}
+      \strng{nameabibnamehash}{f6fa3e27da58f4d6a4c7bdca0f53fef0}
+      \strng{nameanamehash}{d116f111cc7258929cba1e2518520a29}
+      \strng{nameafullhash}{30dc7ba408072a1c9e04ab00a4f543de}
+      \strng{nameafullhashraw}{30dc7ba408072a1c9e04ab00a4f543de}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chinese Journal of Ship Research}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{number}{5}
+      \field{title}{海流对水下航行器运动及载荷影响研究综述}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{volume}{19}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \keyw{Zhao2024}
+    \endentry
+    \entry{sun2024underwater}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=b92111586bd82b1b91ba1811eaa4154b}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Linxiang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d54c5b0a00a0916afa4a843a6a721719}{%
+           family={Hui},
+           familyi={H\bibinitperiod},
+           given={Xiaolong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=b0d4d16163a7958f7127c4566039215e}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xibo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=3f31099b38e9f4d213e82955f8777ec5}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Xuejian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6cfe98719c6887d7ad96a2b9b1db6956}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{namea}{6}{}{%
+        {{hash=b92111586bd82b1b91ba1811eaa4154b}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Linxiang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d54c5b0a00a0916afa4a843a6a721719}{%
+           family={Hui},
+           familyi={H\bibinitperiod},
+           given={Xiaolong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=b0d4d16163a7958f7127c4566039215e}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xibo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=3f31099b38e9f4d213e82955f8777ec5}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Xuejian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6cfe98719c6887d7ad96a2b9b1db6956}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {AAAS}%
+      }
+      \strng{namehash}{80f916129b736599721628e1f8512f7e}
+      \strng{fullhash}{fc8a64089c795ed8703cb423c029a88a}
+      \strng{fullhashraw}{fc8a64089c795ed8703cb423c029a88a}
+      \strng{bibnamehash}{2977f9ffaadd008bff909da6e70b6b56}
+      \strng{authorbibnamehash}{2977f9ffaadd008bff909da6e70b6b56}
+      \strng{authornamehash}{80f916129b736599721628e1f8512f7e}
+      \strng{authorfullhash}{fc8a64089c795ed8703cb423c029a88a}
+      \strng{authorfullhashraw}{fc8a64089c795ed8703cb423c029a88a}
+      \strng{nameabibnamehash}{2977f9ffaadd008bff909da6e70b6b56}
+      \strng{nameanamehash}{80f916129b736599721628e1f8512f7e}
+      \strng{nameafullhash}{fc8a64089c795ed8703cb423c029a88a}
+      \strng{nameafullhashraw}{fc8a64089c795ed8703cb423c029a88a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cyborg and Bionic Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Underwater robots and key technologies for operation control}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{5}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{0089}
+      \range{pages}{1}
+      \keyw{sun2024underwater}
     \endentry
     \entry{dong2023robust}{article}{}{}
       \name{author}{2}{}{%
@@ -520,8 +909,8 @@
       \strng{nameanamehash}{b4384dc23f934764ec4ed2af2d2da2fd}
       \strng{nameafullhash}{2d2c238bc0f80fa97516a69146d4dbb4}
       \strng{nameafullhashraw}{2d2c238bc0f80fa97516a69146d4dbb4}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sensors}
@@ -593,8 +982,8 @@
       \strng{nameanamehash}{59c9699b1704301746ab1ac94ca62c10}
       \strng{nameafullhash}{2ae3379786b39d20a29d874d5193c159}
       \strng{nameafullhashraw}{2ae3379786b39d20a29d874d5193c159}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -655,8 +1044,8 @@
       \strng{nameanamehash}{ae11ff0f09d5e821236b7e25062cc333}
       \strng{nameafullhash}{4f54eae8a67bf3708c8db5339e9eb552}
       \strng{nameafullhashraw}{4f54eae8a67bf3708c8db5339e9eb552}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematical Modelling of Systems}
@@ -739,8 +1128,8 @@
       \strng{nameafullhash}{1ce10c184aaa3ff88a3cd90b1ff9f48d}
       \strng{nameafullhashraw}{1ce10c184aaa3ff88a3cd90b1ff9f48d}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Control Systems Technology}
@@ -813,8 +1202,8 @@
       \strng{nameafullhash}{c342fb176b0bec828fc7f4b1fe93f7e9}
       \strng{nameafullhashraw}{c342fb176b0bec828fc7f4b1fe93f7e9}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Automation Science and Engineering}
@@ -1002,6 +1391,950 @@
       \field{dateera}{ce}
       \keyw{Hong2025Review}
     \endentry
+    \entry{mamakoukas2021derivative}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8bc741e49f9a5496ae7109fd63b0b6e3}{%
+           family={Mamakoukas},
+           familyi={M\bibinitperiod},
+           given={Giorgos},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a9ccc5ce6cfbc4cd572b1a6a42375a70}{%
+           family={Castano},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5fd2790629b963357665c062c05beba9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Xiaobo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a1870437eefe5c7281f0858414a4676c}{%
+           family={Murphey},
+           familyi={M\bibinitperiod},
+           given={Todd\bibnamedelima D},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=8bc741e49f9a5496ae7109fd63b0b6e3}{%
+           family={Mamakoukas},
+           familyi={M\bibinitperiod},
+           given={Giorgos},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a9ccc5ce6cfbc4cd572b1a6a42375a70}{%
+           family={Castano},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5fd2790629b963357665c062c05beba9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Xiaobo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a1870437eefe5c7281f0858414a4676c}{%
+           family={Murphey},
+           familyi={M\bibinitperiod},
+           given={Todd\bibnamedelima D},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b3e565e76528b16977c5b3ad20fde307}
+      \strng{fullhash}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{fullhashraw}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{bibnamehash}{1785c951c7211fff4c8dfdf822441f53}
+      \strng{authorbibnamehash}{1785c951c7211fff4c8dfdf822441f53}
+      \strng{authornamehash}{b3e565e76528b16977c5b3ad20fde307}
+      \strng{authorfullhash}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{authorfullhashraw}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{nameabibnamehash}{1785c951c7211fff4c8dfdf822441f53}
+      \strng{nameanamehash}{b3e565e76528b16977c5b3ad20fde307}
+      \strng{nameafullhash}{b1833e0dbb65863dd3a656bf547a1f93}
+      \strng{nameafullhashraw}{b1833e0dbb65863dd3a656bf547a1f93}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Derivative-based Koopman operators for real-time control of robotic systems}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{37}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{2173\bibrangedash 2192}
+      \range{pages}{20}
+      \keyw{mamakoukas2021derivative}
+    \endentry
+    \entry{cui2017adaptive}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=20eb1a651d55da94a68eec73e2c540a0}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Rongxin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1f14a433675e94961d3665b616f6bc66}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chenguang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2af761d9bef859ea29248418adce0dd7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=803ab18852cac1c2a1956a4dc6be9648}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=20eb1a651d55da94a68eec73e2c540a0}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Rongxin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1f14a433675e94961d3665b616f6bc66}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chenguang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2af761d9bef859ea29248418adce0dd7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=803ab18852cac1c2a1956a4dc6be9648}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{026e6516d0e8e8f94e951b9424c8c021}
+      \strng{fullhash}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{fullhashraw}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{bibnamehash}{a4760c35f685995de2a2b0e8a259cfd1}
+      \strng{authorbibnamehash}{a4760c35f685995de2a2b0e8a259cfd1}
+      \strng{authornamehash}{026e6516d0e8e8f94e951b9424c8c021}
+      \strng{authorfullhash}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{authorfullhashraw}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{nameabibnamehash}{a4760c35f685995de2a2b0e8a259cfd1}
+      \strng{nameanamehash}{026e6516d0e8e8f94e951b9424c8c021}
+      \strng{nameafullhash}{e32dc005c4ece870a26c9aa8862f32d4}
+      \strng{nameafullhashraw}{e32dc005c4ece870a26c9aa8862f32d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics: Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Adaptive neural network control of AUVs with control input nonlinearities using reinforcement learning}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{47}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{1019\bibrangedash 1029}
+      \range{pages}{11}
+      \keyw{cui2017adaptive}
+    \endentry
+    \entry{chu2022path}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f489b9e2ba2ad1d65a8f4ac0c3cf6213}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fulun},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cd517b11edf076967adc081e33d13a5}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Tingjun},
+           giveni={T\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f489b9e2ba2ad1d65a8f4ac0c3cf6213}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fulun},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cd517b11edf076967adc081e33d13a5}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Tingjun},
+           giveni={T\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{fullhash}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{fullhashraw}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{bibnamehash}{7841e61a50d7a60d6502a40fd809ebe6}
+      \strng{authorbibnamehash}{7841e61a50d7a60d6502a40fd809ebe6}
+      \strng{authornamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{authorfullhash}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{authorfullhashraw}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{nameabibnamehash}{7841e61a50d7a60d6502a40fd809ebe6}
+      \strng{nameanamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{nameafullhash}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \strng{nameafullhashraw}{ab3446dc7c5941148c7da4e6b4ef2831}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Intelligent Vehicles}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{Path planning based on deep reinforcement learning for autonomous underwater vehicles under ocean current disturbance}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{8}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{108\bibrangedash 120}
+      \range{pages}{13}
+      \keyw{chu2022path}
+    \endentry
+    \entry{hadi2022deep}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a5e2f96b4e5f55d50dc6c38a4d1cb9af}{%
+           family={Hadi},
+           familyi={H\bibinitperiod},
+           given={Behnaz},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a045fb0b641b919857655137529ca8b0}{%
+           family={Khosravi},
+           familyi={K\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9d504acb238c16d402a2aa82ea88a6c}{%
+           family={Sarhadi},
+           familyi={S\bibinitperiod},
+           given={Pouria},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=a5e2f96b4e5f55d50dc6c38a4d1cb9af}{%
+           family={Hadi},
+           familyi={H\bibinitperiod},
+           given={Behnaz},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a045fb0b641b919857655137529ca8b0}{%
+           family={Khosravi},
+           familyi={K\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9d504acb238c16d402a2aa82ea88a6c}{%
+           family={Sarhadi},
+           familyi={S\bibinitperiod},
+           given={Pouria},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e739a894b5a3642ca9d1f9529855a6d8}
+      \strng{fullhash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{fullhashraw}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{bibnamehash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{authorbibnamehash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{authornamehash}{e739a894b5a3642ca9d1f9529855a6d8}
+      \strng{authorfullhash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{authorfullhashraw}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{nameabibnamehash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{nameanamehash}{e739a894b5a3642ca9d1f9529855a6d8}
+      \strng{nameafullhash}{dbc99f6e200990df27d8bff370b63d54}
+      \strng{nameafullhashraw}{dbc99f6e200990df27d8bff370b63d54}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Ocean Research}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Deep reinforcement learning for adaptive path planning and control of an autonomous underwater vehicle}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{129}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{103326}
+      \range{pages}{1}
+      \keyw{hadi2022deep}
+    \endentry
+    \entry{wang2023path}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=c97a05151ba125dc0beb11eb6e2ed62a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhanyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cb7e09144a040f7c6b239146c288fade}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yulong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f16396ca551d8d575e0fcb4b8a6aa5cd}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Caipeng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=847033db4148b2ca5e23d6d95f764388}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=60b04d086f838bf47c5aef1f411c3d95}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=c97a05151ba125dc0beb11eb6e2ed62a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhanyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cb7e09144a040f7c6b239146c288fade}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yulong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f16396ca551d8d575e0fcb4b8a6aa5cd}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Caipeng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=847033db4148b2ca5e23d6d95f764388}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=60b04d086f838bf47c5aef1f411c3d95}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Dapeng},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{17144599881e5e3ea06076d3c0308552}
+      \strng{fullhash}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{fullhashraw}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{bibnamehash}{9ba6d93cfa3f038b55e4f39bc9ffd6bf}
+      \strng{authorbibnamehash}{9ba6d93cfa3f038b55e4f39bc9ffd6bf}
+      \strng{authornamehash}{17144599881e5e3ea06076d3c0308552}
+      \strng{authorfullhash}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{authorfullhashraw}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{nameabibnamehash}{9ba6d93cfa3f038b55e4f39bc9ffd6bf}
+      \strng{nameanamehash}{17144599881e5e3ea06076d3c0308552}
+      \strng{nameafullhash}{2246f0ba792f02cac6643c80e85e252d}
+      \strng{nameafullhashraw}{2246f0ba792f02cac6643c80e85e252d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ocean Engineering}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Path-following optimal control of autonomous underwater vehicle based on deep reinforcement learning}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{268}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{113407}
+      \range{pages}{1}
+      \keyw{wang2023path}
+    \endentry
+    \entry{chu2020motion}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=115afe6cc7f667cde499464315bf3ce5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6426d3a36c3c69258d0a7fb6630f00c8}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Daqi},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8d0ca371033ee2f342e89bf1725daba6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingjun},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=35e9a5a4be3193852d59c9d3aa7b26fe}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=115afe6cc7f667cde499464315bf3ce5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6426d3a36c3c69258d0a7fb6630f00c8}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Daqi},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8d0ca371033ee2f342e89bf1725daba6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingjun},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17712d02e79bdc768d4ba1d5c77058b6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chaomin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{fullhash}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{fullhashraw}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{bibnamehash}{a4510d96fb84e82ddbb84696f7200e13}
+      \strng{authorbibnamehash}{a4510d96fb84e82ddbb84696f7200e13}
+      \strng{authornamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{authorfullhash}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{authorfullhashraw}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{nameabibnamehash}{a4510d96fb84e82ddbb84696f7200e13}
+      \strng{nameanamehash}{27ad0375f03fdb5162a6a64038cb1bbd}
+      \strng{nameafullhash}{33615b854b503a5d325cdb2be7f69e7f}
+      \strng{nameafullhashraw}{33615b854b503a5d325cdb2be7f69e7f}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IET Intelligent Transport Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{7}
+      \field{title}{Motion control of unmanned underwater vehicles via deep imitation reinforcement learning algorithm}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{764\bibrangedash 774}
+      \range{pages}{11}
+      \keyw{chu2020motion}
+    \endentry
+    \entry{ardusub_autopilot_docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f67513f9bb774be69c4931a435f90ac0}{%
+           family={{ArduSub}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=f67513f9bb774be69c4931a435f90ac0}{%
+           family={{ArduSub}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{fullhash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{fullhashraw}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{bibnamehash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{authorbibnamehash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{authornamehash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{authorfullhash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{authorfullhashraw}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{nameabibnamehash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{nameanamehash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{nameafullhash}{f67513f9bb774be69c4931a435f90ac0}
+      \strng{nameafullhashraw}{f67513f9bb774be69c4931a435f90ac0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{ArduSub Autopilot Hardware Documentation}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ardusub.com/introduction/features.html
+      \endverb
+      \verb{url}
+      \verb https://www.ardusub.com/introduction/features.html
+      \endverb
+      \keyw{ardusub_autopilot_docs}
+    \endentry
+    \entry{ardupilot_pwm_esc_docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=002e4a64dbc1404d94eef1845911c190}{%
+           family={{ArduPilot Dev Team}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=002e4a64dbc1404d94eef1845911c190}{%
+           family={{ArduPilot Dev Team}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{fullhash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{fullhashraw}{002e4a64dbc1404d94eef1845911c190}
+      \strng{bibnamehash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{authorbibnamehash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{authornamehash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{authorfullhash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{authorfullhashraw}{002e4a64dbc1404d94eef1845911c190}
+      \strng{nameabibnamehash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{nameanamehash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{nameafullhash}{002e4a64dbc1404d94eef1845911c190}
+      \strng{nameafullhashraw}{002e4a64dbc1404d94eef1845911c190}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{ESCs and Motors: PWM, OneShot and DShot}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://ardupilot.org/copter/docs/common-brushless-escs.html
+      \endverb
+      \verb{url}
+      \verb https://ardupilot.org/copter/docs/common-brushless-escs.html
+      \endverb
+      \keyw{ardupilot_pwm_esc_docs}
+    \endentry
+    \entry{blueos_esc_docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f168310fb01a9d93acc69ea086d780cb}{%
+           family={{Blue Robotics}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=f168310fb01a9d93acc69ea086d780cb}{%
+           family={{Blue Robotics}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{fullhash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{fullhashraw}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{bibnamehash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{authorbibnamehash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{authornamehash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{authorfullhash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{authorfullhashraw}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{nameabibnamehash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{nameanamehash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{nameafullhash}{f168310fb01a9d93acc69ea086d780cb}
+      \strng{nameafullhashraw}{f168310fb01a9d93acc69ea086d780cb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{ArduSub-Compatible ESCs and PWM Control Requirements}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://blueos.cloud/docs/latest/advanced/ardusub/escs/
+      \endverb
+      \verb{url}
+      \verb https://blueos.cloud/docs/latest/advanced/ardusub/escs/
+      \endverb
+      \keyw{blueos_esc_docs}
+    \endentry
+    \entry{px4_dshot_docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b52b778c63203841cf2cbbd45551085d}{%
+           family={{PX4 Development Team}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=b52b778c63203841cf2cbbd45551085d}{%
+           family={{PX4 Development Team}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{fullhash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{fullhashraw}{b52b778c63203841cf2cbbd45551085d}
+      \strng{bibnamehash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{authorbibnamehash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{authornamehash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{authorfullhash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{authorfullhashraw}{b52b778c63203841cf2cbbd45551085d}
+      \strng{nameabibnamehash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{nameanamehash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{nameafullhash}{b52b778c63203841cf2cbbd45551085d}
+      \strng{nameafullhashraw}{b52b778c63203841cf2cbbd45551085d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{DShot ESC Protocol}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.px4.io/main/en/peripherals/dshot.html
+      \endverb
+      \verb{url}
+      \verb https://docs.px4.io/main/en/peripherals/dshot.html
+      \endverb
+      \keyw{px4_dshot_docs}
+    \endentry
+    \entry{freertos_scheduler_docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{nameabibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{nameanamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{nameafullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{nameafullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{FreeRTOS Kernel: Tasks and Scheduling}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/01-Tasks-and-co-routines/01-Tasks-overview
+      \endverb
+      \verb{url}
+      \verb https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/01-Tasks-and-co-routines/01-Tasks-overview
+      \endverb
+      \keyw{freertos_scheduler_docs}
+    \endentry
+    \entry{xu2022ros2_realtime_executor}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=af615ccb8d33466fb7af54f2b4da84d0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yilin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=423b9177dd8848380fea9aa3e126b82c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Kang},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2a72f304d2bc33c9c92301f2dc3063b2}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{3}{}{%
+        {{hash=af615ccb8d33466fb7af54f2b4da84d0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yilin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=423b9177dd8848380fea9aa3e126b82c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Kang},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2a72f304d2bc33c9c92301f2dc3063b2}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{cf50c8abe77b2543d235f01e2998cc02}
+      \strng{fullhash}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{fullhashraw}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{bibnamehash}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{authorbibnamehash}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{authornamehash}{cf50c8abe77b2543d235f01e2998cc02}
+      \strng{authorfullhash}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{authorfullhashraw}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{nameabibnamehash}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{nameanamehash}{cf50c8abe77b2543d235f01e2998cc02}
+      \strng{nameafullhash}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \strng{nameafullhashraw}{bd026b37bd8ab2f41e02a9d07b07c0ab}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE 28th International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{A Real-Time Executor for ROS 2}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \keyw{xu2022ros2_realtime_executor}
+    \endentry
+    \entry{chaaban2023ros2_scheduling}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=ce5c463340a9cc40079c06aa24d5306c}{%
+           family={Chaaban},
+           familyi={C\bibinitperiod},
+           given={Anas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=58866dde961ba36495c4ca9eacc5a7ff}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yecheng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{2}{}{%
+        {{hash=ce5c463340a9cc40079c06aa24d5306c}{%
+           family={Chaaban},
+           familyi={C\bibinitperiod},
+           given={Anas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=58866dde961ba36495c4ca9eacc5a7ff}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yecheng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{118fddf87d8e9f7e8748f08c4e6eacd6}
+      \strng{fullhash}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{fullhashraw}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{bibnamehash}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{authorbibnamehash}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{authornamehash}{118fddf87d8e9f7e8748f08c4e6eacd6}
+      \strng{authorfullhash}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{authorfullhashraw}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{nameabibnamehash}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{nameanamehash}{118fddf87d8e9f7e8748f08c4e6eacd6}
+      \strng{nameafullhash}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \strng{nameafullhashraw}{c33d6fa8d7562de73a18ab6d2295cd10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE Real-Time Systems Symposium (RTSS)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{End-to-End Latency Analysis and Priority-Driven Scheduling of ROS 2 Applications}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \keyw{chaaban2023ros2_scheduling}
+    \endentry
+    \entry{wang2024microros_pods}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=d23f8780b31a9738eb2ec5f9c954bcb4}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e106702319fdc059f29076981e634da2}{%
+           family={Casini},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4e861ad1c5275c92a4028c21318b377b}{%
+           family={Buttazzo},
+           familyi={B\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{3}{}{%
+        {{hash=d23f8780b31a9738eb2ec5f9c954bcb4}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e106702319fdc059f29076981e634da2}{%
+           family={Casini},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4e861ad1c5275c92a4028c21318b377b}{%
+           family={Buttazzo},
+           familyi={B\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{bcc0ee0115ca53333821bd83b79eadf2}
+      \strng{fullhash}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{fullhashraw}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{bibnamehash}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{authorbibnamehash}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{authornamehash}{bcc0ee0115ca53333821bd83b79eadf2}
+      \strng{authorfullhash}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{authorfullhashraw}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{nameabibnamehash}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{nameanamehash}{bcc0ee0115ca53333821bd83b79eadf2}
+      \strng{nameafullhash}{5837476617fd3b9ecad130297b03e2c4}
+      \strng{nameafullhashraw}{5837476617fd3b9ecad130297b03e2c4}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE Real-Time and Embedded Technology and Applications Symposium (RTAS)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Priority-Driven Chain-Aware Scheduling for micro-ROS}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \keyw{wang2024microros_pods}
+    \endentry
     \entry{fossen2011handbook}{book}{}{}
       \name{author}{1}{}{%
         {{hash=8eca0c434dd587f3eff346c053ba5948}{%
@@ -1038,8 +2371,8 @@
       \strng{nameanamehash}{8eca0c434dd587f3eff346c053ba5948}
       \strng{nameafullhash}{8eca0c434dd587f3eff346c053ba5948}
       \strng{nameafullhashraw}{8eca0c434dd587f3eff346c053ba5948}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1052,6 +2385,273 @@
       \field{year}{2011}
       \field{dateera}{ce}
       \keyw{fossen2011handbook}
+    \endentry
+    \entry{maliky2019added}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b73045cd4c4a4c5ac637632bab2cabd1}{%
+           family={Maliky},
+           familyi={M\bibinitperiod},
+           given={Nu’man\bibnamedelima Amri},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9cb0189409b1b15c2ffe2aa4e955af3e}{%
+           family={Subarkah},
+           familyi={S\bibinitperiod},
+           given={Mochamad\bibnamedelima Teguh},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=604af27f510bc056a2a2a7845d0cf2e2}{%
+           family={Hidayat},
+           familyi={H\bibinitperiod},
+           given={Syarif},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=b73045cd4c4a4c5ac637632bab2cabd1}{%
+           family={Maliky},
+           familyi={M\bibinitperiod},
+           given={Nu’man\bibnamedelima Amri},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9cb0189409b1b15c2ffe2aa4e955af3e}{%
+           family={Subarkah},
+           familyi={S\bibinitperiod},
+           given={Mochamad\bibnamedelima Teguh},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=604af27f510bc056a2a2a7845d0cf2e2}{%
+           family={Hidayat},
+           familyi={H\bibinitperiod},
+           given={Syarif},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{97777ff3a91d1a2d5c4fd011d1ef88f1}
+      \strng{fullhash}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{fullhashraw}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{bibnamehash}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{authorbibnamehash}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{authornamehash}{97777ff3a91d1a2d5c4fd011d1ef88f1}
+      \strng{authorfullhash}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{authorfullhashraw}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{nameabibnamehash}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{nameanamehash}{97777ff3a91d1a2d5c4fd011d1ef88f1}
+      \strng{nameafullhash}{f897a905d42aa43c57dd1b4461da3ba2}
+      \strng{nameafullhashraw}{f897a905d42aa43c57dd1b4461da3ba2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 6th International Conference on Electric Vehicular Technology (ICEVT)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Added mass and drag prediction using CFD fluent simulation for an autonomous barge parameters}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{52\bibrangedash 57}
+      \range{pages}{6}
+      \keyw{maliky2019added}
+    \endentry
+    \entry{sha2025portable}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=513f6a775cd7c0c6b9d4d996624b2b7a}{%
+           family={Sha},
+           familyi={S\bibinitperiod},
+           given={Zeyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=fdbce439adf612483478925969ae8ea3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaorui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=1ee927469a019bbef19010305ae3f44c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Mingyang},
+           giveni={M\bibinitperiod}}}%
+        {{hash=23c23c7f7ba187887d75b3cf49677b84}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Hong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1f845f0c6d2272e3fa7e44a2c26aaad6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Feitian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=513f6a775cd7c0c6b9d4d996624b2b7a}{%
+           family={Sha},
+           familyi={S\bibinitperiod},
+           given={Zeyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=fdbce439adf612483478925969ae8ea3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaorui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=1ee927469a019bbef19010305ae3f44c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Mingyang},
+           giveni={M\bibinitperiod}}}%
+        {{hash=23c23c7f7ba187887d75b3cf49677b84}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Hong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1f845f0c6d2272e3fa7e44a2c26aaad6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Feitian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c301fc51941c10bd95a71665016f934c}
+      \strng{fullhash}{6cd1cec89256a9a345270870646a14d5}
+      \strng{fullhashraw}{6cd1cec89256a9a345270870646a14d5}
+      \strng{bibnamehash}{60af4df8016d11e559297727b354349c}
+      \strng{authorbibnamehash}{60af4df8016d11e559297727b354349c}
+      \strng{authornamehash}{c301fc51941c10bd95a71665016f934c}
+      \strng{authorfullhash}{6cd1cec89256a9a345270870646a14d5}
+      \strng{authorfullhashraw}{6cd1cec89256a9a345270870646a14d5}
+      \strng{nameabibnamehash}{60af4df8016d11e559297727b354349c}
+      \strng{nameanamehash}{c301fc51941c10bd95a71665016f934c}
+      \strng{nameafullhash}{6cd1cec89256a9a345270870646a14d5}
+      \strng{nameafullhashraw}{6cd1cec89256a9a345270870646a14d5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{A portable autonomous underwater vehicle with multi-thruster propulsion: Design, development, and vision-based tracking control}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \keyw{sha2025portable}
+    \endentry
+    \entry{von2022open}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=3d5e77cfa4de7a06de915c31cff5d1ff}{%
+           family={Benzon},
+           familyi={B\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=81b1a5b896a803d9e4d1f6400ccea502}{%
+           family={S{ø}rensen},
+           familyi={S\bibinitperiod},
+           given={Fredrik\bibnamedelima Fogh},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=bad73faacda36a4f7cc1a101d0f90b32}{%
+           family={Uth},
+           familyi={U\bibinitperiod},
+           given={Esben},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9cdb812b431d8174d6977d31e2030ee8}{%
+           family={Jouffroy},
+           familyi={J\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3a39763cb7bf686c5f66bdd81d1e6f8c}{%
+           family={Liniger},
+           familyi={L\bibinitperiod},
+           given={Jesper},
+           giveni={J\bibinitperiod}}}%
+        {{hash=474f6cacb369af51b25227da6f0e0a5f}{%
+           family={Pedersen},
+           familyi={P\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{6}{}{%
+        {{hash=3d5e77cfa4de7a06de915c31cff5d1ff}{%
+           family={Benzon},
+           familyi={B\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=81b1a5b896a803d9e4d1f6400ccea502}{%
+           family={S{ø}rensen},
+           familyi={S\bibinitperiod},
+           given={Fredrik\bibnamedelima Fogh},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=bad73faacda36a4f7cc1a101d0f90b32}{%
+           family={Uth},
+           familyi={U\bibinitperiod},
+           given={Esben},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9cdb812b431d8174d6977d31e2030ee8}{%
+           family={Jouffroy},
+           familyi={J\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3a39763cb7bf686c5f66bdd81d1e6f8c}{%
+           family={Liniger},
+           familyi={L\bibinitperiod},
+           given={Jesper},
+           giveni={J\bibinitperiod}}}%
+        {{hash=474f6cacb369af51b25227da6f0e0a5f}{%
+           family={Pedersen},
+           familyi={P\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{60282fe0fb105cb6005af4c6c30607e7}
+      \strng{fullhash}{f80fbe128d305efc60d464311329dd72}
+      \strng{fullhashraw}{f80fbe128d305efc60d464311329dd72}
+      \strng{bibnamehash}{634c92871747fddf645d3c75195bebcd}
+      \strng{authorbibnamehash}{634c92871747fddf645d3c75195bebcd}
+      \strng{authornamehash}{60282fe0fb105cb6005af4c6c30607e7}
+      \strng{authorfullhash}{f80fbe128d305efc60d464311329dd72}
+      \strng{authorfullhashraw}{f80fbe128d305efc60d464311329dd72}
+      \strng{nameabibnamehash}{634c92871747fddf645d3c75195bebcd}
+      \strng{nameanamehash}{60282fe0fb105cb6005af4c6c30607e7}
+      \strng{nameafullhash}{f80fbe128d305efc60d464311329dd72}
+      \strng{nameafullhashraw}{f80fbe128d305efc60d464311329dd72}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of marine science and engineering}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{12}
+      \field{title}{An open-source benchmark simulator: Control of a bluerov2 underwater robot}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1898}
+      \range{pages}{1}
+      \keyw{von2022open}
     \endentry
   \enddatalist
 \endrefsection
